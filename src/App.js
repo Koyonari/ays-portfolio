@@ -1,7 +1,7 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
 
-const App = () => {
+function App() {
   return (
     <div className="App">
       <div className="js-scroll">
@@ -19,7 +19,7 @@ const App = () => {
               <h1 className="text-[7rem] w-screen mr-9 text-center font-family: 'GeneralSans-Semibold'">
                 HI THERE, I'M
                 <br />
-                <span className="ml-12">AN YONG SHYAN</span>
+                <span className="ml-12 font-bold">AN YONG SHYAN</span>
               </h1>
               <p className="w-[40vw] text-xl">
                 An aspiring software developer & front-end developer building
@@ -27,7 +27,6 @@ const App = () => {
               </p>
             </div>
           </div>
-
           {/* About/Hero section */}
           <section className="bg-black px-4 py-8">
             <div className="flex flex-col md:flex-row md:items-center">
@@ -59,6 +58,6 @@ const App = () => {
       </div>
     </div>
   );
-};
+}
 
 export default App;
