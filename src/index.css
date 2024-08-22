@@ -1,3 +1,142 @@
+@font-face {
+  font-family: "GeneralSans-Semibold";
+  src: url("./fonts/GeneralSans-Semibold.woff2") format("woff2"),
+    url("./fonts/GeneralSans-Semibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "GeneralSans-Regular", sans-serif;
+}
+
+/* Navbar start */
+@media (max-width: 1210px) {
+  .nav-menu {
+    position: fixed;
+    left: -200%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background-color: black;
+    width: 100%;
+    text-align: center;
+    transition: 0.5s;
+  }
+
+  .nav-menu.active {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+/* Navbar end */
+
+/* About start */
+.hero-container span {
+  color: hsl(0 0% 100% / 0.2);
+  background-clip: text;
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  background-image: linear-gradient(white, white, white);
+  animation: scroll-reveal linear forwards;
+  animation-timeline: view();
+}
+.hero-container h2 span {
+  animation-range-start: cover 20vh;
+  animation-range-end: cover 30vh;
+}
+
+.hero-container p span {
+  animation-range-start: cover 14.5vh;
+  animation-range-end: cover 50vh;
+}
+
+@keyframes scroll-reveal {
+  to {
+    background-size: 100% 100%;
+  }
+}
+
+@media screen and (max-width: 1275px) {
+  .foreground h1 {
+    font-size: 5.5rem;
+    text-align: center;
+    margin: 0;
+  }
+  .foreground .staggered {
+    text-align: center;
+    margin: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .foreground p {
+    width: 90vw;
+    text-align: center;
+    margin: 0;
+  }
+  .hero {
+    flex-direction: column;
+  }
+  .hero-img {
+    width: 100%;
+    height: 100%;
+  }
+  .hero-container {
+    width: 100%;
+    font-size: 1.5rem;
+  }
+  .hero-container > h2 {
+    font-size: 4rem;
+  }
+  .hero-container p {
+    font-size: 1.75rem;
+  }
+}
+/* About end */
+
+/* Works start */
+.works-box1 {
+  background-image: url("./images/sunset.jpg");
+}
+
+.works-box2 {
+  background-image: url("./images/sunset2.webp");
+}
+
+.works-box3 {
+  background-image: url("./images/sunset2.webp");
+}
+
+.works-box4 {
+  background-image: url("./images/sunset2.webp");
+}
+/* Works end */
+
+/* Tailwind */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
