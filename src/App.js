@@ -4,7 +4,7 @@ import Parallax from "./components/Parallax";
 import ParallaxEffect from "./components/ParallaxEffect";
 import Services from "./components/Services";
 import Works from "./components/Works";
-import "./index.css";
+import "./css/index.css";
 
 const App = () => {
   ParallaxEffect();

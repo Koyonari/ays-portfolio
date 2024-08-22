@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        "general-sans": ['"GeneralSans-Semibold"', "sans-serif"],
+        "general-sans": ["GeneralSans-Semibold"],
       },
     },
   },

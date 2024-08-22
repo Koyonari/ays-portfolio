@@ -12,22 +12,22 @@ function Services() {
   return (
     <div className="services flex p-8">
       <div className="services-left flex-1 w-[50vw]">
-        <h2 className="text-[8rem] md:text-[4rem] mb-1 mt-6 font-general-sans">
+        <h2 className="text-[8rem] md:text-[6rem] mb-1 mt-8 font-general-sans">
           Services
         </h2>
-        <p>
+        <p className="mt-16">
           I will deliver an experience unlike any other that serves your
           business goals and keeps it ahead of the competition.
         </p>
       </div>
       <div
-        className="services-right flex-1 w-full md:w-1/2 pl-0 md:pl-20"
+        className="services-right flex-1 w-full md:w-1/3 pl-0 md:pl-20"
         id="services"
       >
         {services.map((service, index) => (
           <div key={index} className="services-box mb-8">
             <h3
-              className="bg-white text-black p-4 rounded-[20px] flex items-center cursor-pointer relative"
+              className="bg-white text-black p-4 rounded-[20px] flex items-center cursor-pointer relative font-extrabold"
               onClick={() => handleBoxClick(index)}
             >
               {service.title}
@@ -39,7 +39,11 @@ function Services() {
                 +
               </span>
             </h3>
-            <p className={`mt-2 ${activeBox === index ? "block" : "hidden"}`}>
+            <p
+              className={`mt-2 ml-5 ${
+                activeBox === index ? "block" : "hidden"
+              }`}
+            >
               {service.description}
             </p>
           </div>

@@ -1,5 +1,4 @@
 // Works section
-
 // Import images
 import ictreats from "../images/ictreats.png";
 import programming from "../images/programming.png";
@@ -10,7 +9,7 @@ import band from "../images/band.png";
 function Works() {
   return (
     <div className="works" id="works">
-      <h2 className="text-[8rem] font-general-sans mb-8 w-screen">
+      <h2 className="text-9xl font-general-sans mt-32 mb-16 w-screen">
         Recent Works.
       </h2>
 

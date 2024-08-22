@@ -8,7 +8,7 @@ const useParallaxEffect = () => {
 
     const handleScroll = () => {
       const scrollY = wrapper?.scrollTop || 0;
-      const opacity = Math.max(0, 1 - scrollY / 100);
+      const opacity = Math.max(0, 1 - scrollY / 500);
       if (parallax) {
         parallax.style.opacity = opacity;
       }

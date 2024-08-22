@@ -1,5 +1,5 @@
 // About section
-import "../index.css";
+import "../css/index.css";
 import switchBackground from "../images/switch.webp";
 
 function About() {
@@ -9,14 +9,14 @@ function About() {
         src={switchBackground}
         alt="Switch"
         loading="lazy"
-        className="switch object-cover rounded-full w-[30vw] h-[40vw]"
+        className="switch object-cover rounded-full w-[30vw] h-[25vw]"
       />
 
       <div className="hero-container w-[65vw]" id="about">
         <h2 className="text-[8rem] leading-[8rem] mb-4 font-general-sans">
           <span>About Me</span>
         </h2>
-        <p className="text-lg leading-loose">
+        <p className="text-[1.75rem] leading-loose">
           <span>
             As a second-year Information Technology student at Ngee Ann
             Polytechnic, I've nurtured a keen interest in software development
