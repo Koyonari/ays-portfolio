@@ -11,6 +11,9 @@ module.exports = {
   plugins: [
     function ({ addUtilities }) {
       const newUtilities = {
+        ".perspective-100": {
+          perspective: "100px",
+        },
         ".transform-style-preserve-3d": {
           "transform-style": "preserve-3d",
         },

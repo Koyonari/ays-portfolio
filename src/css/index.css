@@ -6,8 +6,12 @@ body {
   font-family: "GeneralSans-Regular";
 }
 
+body:menu-active {
+  overflow: hidden !important;
+}
+
 /* Navbar start */
-@media (max-width: 1210px) {
+@media (max-width: 720px) {
   .nav-menu {
     position: fixed;
     left: -200%;

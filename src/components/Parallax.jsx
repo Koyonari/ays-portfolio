@@ -7,7 +7,7 @@ function Parallax() {
   return (
     <div className="parallax transition-opacity duration-500 ease-in-out w-full relative flex justify-center items-center h-full transform-style-preserve-3d -z-10">
       <img
-        className="background absolute object-cover z-[-1] w-full h-full bg-white translate-z-2"
+        className="background absolute object-cover z-[-1] w-full h-full bg-white translate-z-2 overflow-clip"
         src={background}
         alt="Background"
       />
