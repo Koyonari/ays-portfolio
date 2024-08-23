@@ -49,36 +49,36 @@ function Navbar() {
 
   return (
     <div className="navbar w-screen z-[1] h-auto mt-3" id="home">
-      <div className="nav-container flex items-center justify-between w-full px-6">
+      <div className="nav-container flex justify-between w-full px-6">
         {/* Navbar */}
         <div className="nav-links flex-col hidden sm:flex">
           <a
             href="#home"
-            className="nav-link text-black no-underline transition-all duration-500 ease-in-out mx-2"
+            className="nav-link text-black leading-8 no-underline transition-all duration-500 ease-in-out mx-4"
           >
             Home
           </a>
           <a
             href="#about"
-            className="nav-link text-black no-underline transition-all duration-500 ease-in-out mx-2"
+            className="nav-link text-black leading-8 no-underline transition-all duration-500 ease-in-out mx-4"
           >
             About
           </a>
           <a
             href="#services"
-            className="nav-link text-black no-underline transition-all duration-500 ease-in-out mx-2"
+            className="nav-link text-black leading-8 no-underline transition-all duration-500 ease-in-out mx-4"
           >
             Services
           </a>
           <a
             href="#works"
-            className="nav-link text-black no-underline transition-all duration-500 ease-in-out mx-2"
+            className="nav-link text-black leading-8 no-underline transition-all duration-500 ease-in-out mx-4"
           >
             Works
           </a>
           <a
             href="#contact"
-            className="nav-link text-black no-underline transition-all duration-500 ease-in-out mx-2"
+            className="nav-link text-black leading-8 no-underline transition-all duration-500 ease-in-out mx-4"
           >
             Contact
           </a>
@@ -112,7 +112,9 @@ function Navbar() {
         </div>
 
         <div className="flex-1"></div>
-        <h5 className="text-[1rem]">Open to work March 2024</h5>
+        <h5 className="text-[1rem] mt-4 font-general-sans">
+          Open to work March 2024
+        </h5>
       </div>
 
       {/* Opened Hamburger Menu */}

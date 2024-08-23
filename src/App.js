@@ -1,14 +1,11 @@
 import About from "./components/About";
 import Navbar from "./components/Navbar";
 import Parallax from "./components/Parallax";
-import ParallaxEffect from "./components/ParallaxEffect";
 import Services from "./components/Services";
 import Works from "./components/Works";
 import "./css/index.css";
 
 const App = () => {
-  ParallaxEffect();
-
   return (
     <div className="App">
       <body>

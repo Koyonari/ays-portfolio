@@ -23,7 +23,9 @@ function Works() {
               alt="Fictional Band Website"
             />
           </div>
-          <h3 className="text-3xl font-semibold">Fictional Band Website</h3>
+          <h3 className="text-3xl font-semibold mt-4">
+            Fictional Band Website
+          </h3>
         </div>
 
         <div className="works-2">
@@ -35,7 +37,7 @@ function Works() {
               alt="I.C.Treats"
             />
           </div>
-          <h3 className="text-3xl font-semibold">I.C.Treats</h3>
+          <h3 className="text-3xl font-semibold mt-4">I.C.Treats</h3>
         </div>
 
         <div className="works-3">
@@ -47,7 +49,7 @@ function Works() {
               alt="Programming Projects"
             />
           </div>
-          <h3 className="text-3xl font-semibold">Programming Projects</h3>
+          <h3 className="text-3xl font-semibold mt-4">Programming Projects</h3>
         </div>
 
         <div className="works-4">
@@ -59,7 +61,9 @@ function Works() {
               alt="Front-End Weekly Dev Blog"
             />
           </div>
-          <h3 className="text-3xl font-semibold">Front-End Weekly Dev Blog</h3>
+          <h3 className="text-3xl font-semibold mt-4">
+            Front-End Weekly Dev Blog
+          </h3>
         </div>
       </div>
 
@@ -71,8 +75,8 @@ function Works() {
             className="works-img1 w-full mb-5 rounded-[20px] border-[1.5px] border-white"
             alt="Price.io"
           />
-          <h3 className="text-3xl font-semibold">Price.io</h3>
-          <p className="text-center mt-2">
+          <h3 className="text-3xl font-semibold mt-4">Price.io</h3>
+          <p className="text-center text-2xl mt-2">
             Gamified global inflation tracker aided with the use of an API
           </p>
         </div>

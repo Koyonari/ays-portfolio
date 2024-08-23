@@ -4,6 +4,17 @@ import takeyourtime from "../images/take-your-time.gif";
 import takeyourtime1 from "../images/take-your-time.png";
 
 function Parallax() {
+  const parallax = document.querySelector(".parallax");
+
+  window.addEventListener("scroll", () => {
+    const scrollY = window.scrollY; // Get current scroll position
+
+    // Calculate opacity based on scroll position
+    const opacity = Math.max(0, 1 - scrollY / 100); // Adjust 200 for desired fade distance
+
+    parallax.style.opacity = opacity;
+  });
+
   return (
     <div className="parallax transition-opacity duration-500 ease-in-out w-full relative flex justify-center items-center h-full transform-style-preserve-3d -z-10">
       <img
@@ -11,13 +22,13 @@ function Parallax() {
         src={background}
         alt="Background"
       />
-      <div className="foreground pt-24 translate-z z-[-1] grid place-items-center font-general-sans">
-        <h1 className="text-[4.5rem] w-screen mr-9 text-center mb-0">
+      <div className="foreground text-[7rem] translate-z z-[-1] grid place-items-center font-general-sans">
+        <h1 className="w-screen text-center mb-0 mr-48">
           HI THERE, I'M
           <br />
-          <span className="ml-12 text-[4.5rem]">AN YONG SHYAN</span>
+          <span className="ml-80">AN YONG SHYAN</span>
         </h1>
-        <p className="mt-4 w-[20vw] text-[0.75rem] text-center font-light">
+        <p className="mt-4 w-[40vw] text-[1.25rem] text-center">
           An aspiring software developer & front-end developer building
           impactful software & crafting elegant interfaces
         </p>

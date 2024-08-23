@@ -10,6 +10,15 @@ body:menu-active {
   overflow: hidden !important;
 }
 
+.mobile-menu {
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(100%);
+}
+
+.menu-active .mobile-menu {
+  transform: translateX(0);
+}
+
 /* Navbar start */
 @media (max-width: 720px) {
   .nav-menu {
