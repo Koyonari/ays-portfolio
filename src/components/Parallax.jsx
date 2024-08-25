@@ -7,10 +7,10 @@ function Parallax() {
   const parallax = document.querySelector(".parallax");
 
   window.addEventListener("scroll", () => {
-    const scrollY = window.scrollY; // Get current scroll position
+    const scrollY = window.scrollY;
 
     // Calculate opacity based on scroll position
-    const opacity = Math.max(0, 1 - scrollY / 100); // Adjust 200 for desired fade distance
+    const opacity = Math.max(0, 1 - scrollY / 100);
 
     parallax.style.opacity = opacity;
   });
@@ -23,7 +23,7 @@ function Parallax() {
         alt="Background"
       />
       <div className="foreground text-[7rem] translate-z z-[-1] grid place-items-center font-general-sans">
-        <h1 className="w-screen text-center mb-0 mr-48">
+        <h1 className="w-screen text-center mb-0 mr-56">
           HI THERE, I'M
           <br />
           <span className="ml-80">AN YONG SHYAN</span>

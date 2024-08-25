@@ -72,7 +72,7 @@ function Works() {
           <img
             src={priceio}
             loading="lazy"
-            className="works-img1 w-full mb-5 rounded-[20px] border-[1.5px] border-white"
+            className="works-img1 w-full mb-5 rounded-[20px] border-[1.5px] border-white border-2"
             alt="Price.io"
           />
           <h3 className="text-3xl font-semibold mt-4">Price.io</h3>

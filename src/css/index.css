@@ -6,20 +6,26 @@ body {
   font-family: "GeneralSans-Regular";
 }
 
-body:menu-active {
+.menu-active {
   overflow: hidden !important;
-}
-
-.mobile-menu {
-  transition: transform 0.5s ease-in-out;
-  transform: translateX(100%);
 }
 
 .menu-active .mobile-menu {
   transform: translateX(0);
+  visibility: visible;
+  opacity: 1;
+  transition: transform 0.4s ease-in-out, visibility 0s linear 0.3s,
+    opacity 0.4s ease-in-out;
 }
 
-/* Navbar start */
+.menu-active-exit .mobile-menu {
+  transform: translateX(-100%);
+  visibility: hidden;
+  opacity: 0;
+  transition: transform 0.4s ease-in-out, visibility 0s linear 0.3s,
+    opacity 0.4s ease-in-out;
+}
+
 @media (max-width: 720px) {
   .nav-menu {
     position: fixed;
@@ -30,7 +36,7 @@ body:menu-active {
     background-color: black;
     width: 100%;
     text-align: center;
-    transition: 0.5s;
+    transition: transform 0.5s ease-in-out;
   }
 
   .nav-menu.active {

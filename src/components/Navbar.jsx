@@ -5,11 +5,16 @@ function Navbar() {
   const [menuActive, setMenuActive] = useState(false);
 
   const toggleMenu = () => {
-    setMenuActive(!menuActive);
-  };
-
-  const closeMenu = () => {
-    setMenuActive(false);
+    if (menuActive) {
+      // exit animation
+      document.body.classList.add("menu-active-exit");
+      setTimeout(() => {
+        setMenuActive(false);
+        document.body.classList.remove("menu-active-exit");
+      }, 500);
+    } else {
+      setMenuActive(true);
+    }
   };
 
   useEffect(() => {
@@ -123,35 +128,35 @@ function Navbar() {
           <a
             href="#home"
             className="nav-link text-white text-5xl no-underline transition-all duration-500 ease-in-out py-2 flex-1 flex items-center justify-center border-b border-white/20"
-            onClick={closeMenu}
+            onClick={toggleMenu}
           >
             Home
           </a>
           <a
             href="#about"
             className="nav-link text-white text-5xl no-underline transition-all duration-500 ease-in-out py-2 flex-1 flex items-center justify-center border-b border-white/20"
-            onClick={closeMenu}
+            onClick={toggleMenu}
           >
             About
           </a>
           <a
             href="#services"
             className="nav-link text-white text-5xl no-underline transition-all duration-500 ease-in-out py-2 flex-1 flex items-center justify-center border-b border-white/20"
-            onClick={closeMenu}
+            onClick={toggleMenu}
           >
             Services
           </a>
           <a
             href="#works"
             className="nav-link text-white text-5xl no-underline transition-all duration-500 ease-in-out py-2 flex-1 flex items-center justify-center border-b border-white/20"
-            onClick={closeMenu}
+            onClick={toggleMenu}
           >
             Works
           </a>
           <a
             href="#contact"
             className="nav-link text-white text-5xl no-underline transition-all duration-500 ease-in-out py-1 flex-1 flex items-center justify-center"
-            onClick={closeMenu}
+            onClick={toggleMenu}
           >
             Contact
           </a>

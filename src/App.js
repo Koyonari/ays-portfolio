@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Parallax from "./components/Parallax";
 import Services from "./components/Services";
 import Works from "./components/Works";
+import Contact from "./components/Contact";
 import "./css/index.css";
 
 const App = () => {
@@ -23,6 +24,8 @@ const App = () => {
               {/* Works section */}
               <Works />
             </section>
+            {/* Contact section */}
+            <Contact />
           </div>
         </div>
       </body>
