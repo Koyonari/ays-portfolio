@@ -9,6 +9,7 @@ module.exports = {
     },
   },
   plugins: [
+    require("tailwind-scrollbar"),
     function ({ addUtilities }) {
       const newUtilities = {
         ".perspective-100": {
