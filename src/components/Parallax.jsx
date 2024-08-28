@@ -1,19 +1,35 @@
-// Parallax section
+import { useEffect } from "react";
 import background from "../images/background.png";
 import takeyourtime from "../images/take-your-time.gif";
 import takeyourtime1 from "../images/take-your-time.png";
+import Scrollbar from "smooth-scrollbar";
 
 function Parallax() {
-  const parallax = document.querySelector(".parallax");
+  useEffect(() => {
+    const parallax = document.querySelector(".parallax");
+    const wrapperElement = document.querySelector(".wrapper");
 
-  window.addEventListener("scroll", () => {
-    const scrollY = window.scrollY;
+    if (wrapperElement) {
+      const scrollbar = Scrollbar.get(wrapperElement);
 
-    // Calculate opacity based on scroll position
-    const opacity = Math.max(0, 1 - scrollY / 100);
+      if (scrollbar) {
+        scrollbar.addListener(({ offset }) => {
+          const scrollY = offset.y;
+          // Calculate opacity based on scroll position
+          const opacity = Math.max(0, 1 - scrollY / 100);
+          parallax.style.opacity = opacity;
+        });
+      }
+    }
 
-    parallax.style.opacity = opacity;
-  });
+    // Cleanup the scrollbar listener when component unmounts
+    return () => {
+      if (Scrollbar) {
+        const scrollbar = Scrollbar.get(wrapperElement);
+        if (scrollbar) scrollbar.destroy();
+      }
+    };
+  }, []);
 
   return (
     <div className="parallax transition-opacity duration-500 ease-in-out w-full relative flex justify-center items-center h-full transform-style-preserve-3d -z-10">
@@ -32,7 +48,7 @@ function Parallax() {
           An aspiring software developer & front-end developer building
           impactful software & crafting elegant interfaces
         </p>
-        <div class="take-your-time flex flex-col items-center">
+        <div className="take-your-time flex flex-col items-center">
           <img
             src={takeyourtime}
             alt="Take your time"

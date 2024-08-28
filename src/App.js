@@ -4,11 +4,14 @@ import Parallax from "./components/Parallax";
 import Services from "./components/Services";
 import Works from "./components/Works";
 import Contact from "./components/Contact";
+import Scroll from "./components/Scroll";
 import "./css/index.css";
 
 const App = () => {
   return (
     <div className="App">
+      {/* Smooth scrolling effect */}
+      <Scroll />
       <div>
         <div className="wrapper transition-opacity duration-500 ease-in-out w-screen h-screen perspective-100 overflow-y-auto overflow-x-hidden">
           {/* Navbar */}

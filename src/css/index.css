@@ -4,6 +4,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: "GeneralSans-Regular";
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 .menu-active {
