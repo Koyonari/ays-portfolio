@@ -4,27 +4,26 @@ import switchBackground from "../images/switch.webp";
 
 function About() {
   return (
-    <section className="hero p-8 flex" data-scroll-section>
+    <section className="hero p-8 flex h-[75vh]" data-scroll-section>
       <img
         src={switchBackground}
         alt="Switch"
         loading="lazy"
-        className="switch object-cover rounded-full w-[30vw] h-[25vw]"
+        className="switch object-cover rounded-full w-[40vw] h-[75vh]"
       />
 
-      <div className="hero-container w-[65vw]" id="about">
-        <h2 className="text-[8rem] leading-[8rem] mb-4 font-general-sans">
+      <div className="hero-container w-[60vw]" id="about">
+        <h2 className="text-[8rem] leading-[8rem] mb-16 font-general-sans">
           <span>About Me</span>
         </h2>
-        <p className="text-[1.75rem] leading-loose">
+        <p className="text-[2rem] leading-loose">
           <span>
-            As a second-year Information Technology student at Ngee Ann
-            Polytechnic, I've nurtured a keen interest in software development
-            and front-end development since my primary school days. Eager to
-            learn and grow, I'm constantly seeking opportunities to hone my
-            skills and contribute to impactful projects. I'm currently available
-            for a full-time year long internship starting March 2024, excited to
-            leverage my passion and knowledge in the exciting tech industry.
+            As a 2nd year Information Technology student at Ngee Ann Polytechnic
+            with a long-standing passion for software and full-stack
+            development, I'm eager to learn and contribute to meaningful
+            projects. I'm seeking a full-time, year-long internship starting in
+            March 2024, where I can apply my skills and passion to the tech
+            industry.
           </span>
         </p>
       </div>
