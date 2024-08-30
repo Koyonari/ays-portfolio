@@ -55,9 +55,9 @@ function Navbar() {
 
   return (
     <section className="navbar" data-scroll-section>
-      <div className="nav-container bg-white top-0 left-0 h-16 fixed flex justify-between items-center w-full px-6 py-4">
+      <div className="nav-container bg-white top-0 left-0 h-16 text-2xl fixed flex justify-between items-center w-full px-6 py-4">
         <div className="logo">
-          <img src={Logo} alt="Logo" className="h-8" />
+          <img src={Logo} alt="Logo" className="h-10" />
         </div>
 
         <div className="nav-links hidden sm:flex">
