@@ -2,7 +2,10 @@ import "../css/index.css";
 
 function Contact() {
   return (
-    <div className="contact-section flex flex-col items-center mb-8">
+    <section
+      className="contact-section flex flex-col items-center mb-8"
+      data-scroll-section
+    >
       <h2 className="contact-h2 text-5xl md:text-7xl font-semibold text-black text-center mt-8 mb-12">
         <u>Get in touch.</u>
       </h2>
@@ -95,7 +98,7 @@ function Contact() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

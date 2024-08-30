@@ -4,7 +4,7 @@ import switchBackground from "../images/switch.webp";
 
 function About() {
   return (
-    <div className="hero p-8 flex">
+    <section className="hero p-8 flex" data-scroll-section>
       <img
         src={switchBackground}
         alt="Switch"
@@ -23,12 +23,12 @@ function About() {
             and front-end development since my primary school days. Eager to
             learn and grow, I'm constantly seeking opportunities to hone my
             skills and contribute to impactful projects. I'm currently available
-            for a full-time position starting March 2024, excited to leverage my
-            passion and knowledge in the exciting tech industry.
+            for a full-time year long internship starting March 2024, excited to
+            leverage my passion and knowledge in the exciting tech industry.
           </span>
         </p>
       </div>
-    </div>
+    </section>
   );
 }
 

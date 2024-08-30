@@ -26,6 +26,10 @@ module.exports = {
         ".translate-z-2": {
           transform: "translateZ(-100px) scale(2)",
         },
+        ".text-outline-only": {
+          "-webkit-text-fill-color": "transparent",
+          "-webkit-text-stroke": "5px",
+        },
       };
 
       addUtilities(newUtilities, ["responsive", "hover"]);

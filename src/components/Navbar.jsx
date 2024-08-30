@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Logo from "../images/logo.svg";
 import "../css/index.css";
 
 function Navbar() {
@@ -11,7 +12,7 @@ function Navbar() {
       setTimeout(() => {
         setMenuActive(false);
         document.body.classList.remove("menu-active-exit");
-      }, 500);
+      }, 400);
     } else {
       setMenuActive(true);
     }
@@ -53,16 +54,13 @@ function Navbar() {
   }, [menuActive]);
 
   return (
-    <div className="navbar w-screen z-[1] h-auto mt-3" id="home">
-      <div className="nav-container flex justify-between w-full px-6">
-        {/* Navbar */}
-        <div className="nav-links flex-col hidden sm:flex">
-          <a
-            href="#home"
-            className="nav-link text-black leading-8 no-underline transition-all duration-500 ease-in-out mx-4"
-          >
-            Home
-          </a>
+    <section className="navbar" data-scroll-section>
+      <div className="nav-container bg-white top-0 left-0 h-16 fixed flex justify-between items-center w-full px-6 py-4">
+        <div className="logo">
+          <img src={Logo} alt="Logo" className="h-8" />
+        </div>
+
+        <div className="nav-links hidden sm:flex">
           <a
             href="#about"
             className="nav-link text-black leading-8 no-underline transition-all duration-500 ease-in-out mx-4"
@@ -89,7 +87,6 @@ function Navbar() {
           </a>
         </div>
 
-        {/* Hamburger Menu */}
         <div
           className={`hamburger cursor-pointer z-[99999] sm:hidden ${
             menuActive ? "active" : ""
@@ -115,11 +112,6 @@ function Navbar() {
             style={{ backgroundColor: menuActive ? "white" : "black" }}
           ></span>
         </div>
-
-        <div className="flex-1"></div>
-        <h5 className="text-[1rem] mt-4 font-general-sans">
-          Open to work March 2024
-        </h5>
       </div>
 
       {/* Opened Hamburger Menu */}
@@ -162,7 +154,7 @@ function Navbar() {
           </a>
         </div>
       )}
-    </div>
+    </section>
   );
 }
 

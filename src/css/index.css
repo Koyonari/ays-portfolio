@@ -4,8 +4,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: "GeneralSans-Regular";
-  width: 100vw;
-  overflow-x: hidden;
+  height: 100%;
+  width: 100%;
 }
 
 .menu-active {
@@ -21,7 +21,7 @@ body {
 }
 
 .menu-active-exit .mobile-menu {
-  transform: translateX(-100%);
+  transform: translateX(100%);
   visibility: hidden;
   opacity: 0;
   transition: transform 0.4s ease-in-out, visibility 0s linear 0.3s,
