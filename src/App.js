@@ -49,14 +49,16 @@ const App = () => {
           preloader ? "opacity-0" : "opacity-100"
         }`}
       >
+        {/* Navbar */}
+        <div className="fixed top-0 left-0 w-full z-[10000]">
+          <Navbar />
+        </div>
         <div
           id="wrapper"
           data-scroll-container
           className="wrapper transition-opacity duration-500 ease-in-out w-screen h-screen perspective-100 overflow-y-auto overflow-x-hidden"
         >
           {" "}
-          {/* Navbar */}
-          <Navbar />
           {/* Parallax */}
           <Parallax />
           {/* About/Hero section */}
