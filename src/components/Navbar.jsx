@@ -55,7 +55,7 @@ function Navbar() {
 
   return (
     <section className="navbar" data-scroll-section>
-      <div className="nav-container bg-white top-0 left-0 h-16 text-2xl fixed flex justify-between items-center w-full px-6 py-4">
+      <div className="nav-container bg-white top-0 left-0 h-20 text-2xl fixed flex justify-between items-center w-full px-6 py-4">
         <div className="logo">
           <img src={Logo} alt="Logo" className="h-10" />
         </div>
@@ -63,27 +63,27 @@ function Navbar() {
         <div className="nav-links hidden sm:flex">
           <a
             href="#about"
-            className="nav-link text-black leading-8 no-underline transition-all duration-500 ease-in-out mx-4"
+            className="nav-link text-black leading-[3rem] no-underline transition-all duration-500 ease-in-out mx-5"
           >
-            About
+            about
           </a>
           <a
             href="#services"
-            className="nav-link text-black leading-8 no-underline transition-all duration-500 ease-in-out mx-4"
+            className="nav-link text-black leading-[3rem] no-underline transition-all duration-500 ease-in-out mx-5"
           >
-            Services
+            services
           </a>
           <a
             href="#works"
-            className="nav-link text-black leading-8 no-underline transition-all duration-500 ease-in-out mx-4"
+            className="nav-link text-black leading-[3rem] no-underline transition-all duration-500 ease-in-out mx-5"
           >
-            Works
+            works
           </a>
           <a
             href="#contact"
-            className="nav-link text-black leading-8 no-underline transition-all duration-500 ease-in-out mx-4"
+            className="nav-link text-white bg-black border border-black p-2 leading-8 no-underline transition-all duration-500 ease-in-out mx-5 rounded-full"
           >
-            Contact
+            Let's Talk
           </a>
         </div>
 
@@ -118,39 +118,32 @@ function Navbar() {
       {menuActive && (
         <div className="mobile-menu fixed top-0 left-0 w-screen h-screen bg-black z-[9999] flex flex-col font-general-sans">
           <a
-            href="#home"
-            className="nav-link text-white text-5xl no-underline transition-all duration-500 ease-in-out py-2 flex-1 flex items-center justify-center border-b border-white/20"
-            onClick={toggleMenu}
-          >
-            Home
-          </a>
-          <a
             href="#about"
             className="nav-link text-white text-5xl no-underline transition-all duration-500 ease-in-out py-2 flex-1 flex items-center justify-center border-b border-white/20"
             onClick={toggleMenu}
           >
-            About
+            about
           </a>
           <a
             href="#services"
             className="nav-link text-white text-5xl no-underline transition-all duration-500 ease-in-out py-2 flex-1 flex items-center justify-center border-b border-white/20"
             onClick={toggleMenu}
           >
-            Services
+            services
           </a>
           <a
             href="#works"
             className="nav-link text-white text-5xl no-underline transition-all duration-500 ease-in-out py-2 flex-1 flex items-center justify-center border-b border-white/20"
             onClick={toggleMenu}
           >
-            Works
+            works
           </a>
           <a
             href="#contact"
             className="nav-link text-white text-5xl no-underline transition-all duration-500 ease-in-out py-1 flex-1 flex items-center justify-center"
             onClick={toggleMenu}
           >
-            Contact
+            Let's Talk
           </a>
         </div>
       )}
