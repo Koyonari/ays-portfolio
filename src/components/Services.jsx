@@ -53,7 +53,13 @@ function Services() {
 const service_header = {
   title: "Services",
   description:
-    "I will deliver an experience unlike any other that serves your business goals and keeps it ahead of the competition.",
+    "I focus on both front-end and back-end development, crafting elegant interfaces and building impactful software tailored to your needs and wants.",
+};
+
+const expertise = {
+  e1: "Web Development",
+  e2: "Back-End Development",
+  e3: "Software Development",
 };
 
 const services = [
