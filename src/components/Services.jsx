@@ -13,12 +13,9 @@ function Services() {
     <div className="services flex p-8">
       <div className="services-left flex-1 w-[50vw]">
         <h2 className="text-[8rem] md:text-[6rem] mb-1 mt-8 font-general-sans">
-          Services
+          {service_header.title}
         </h2>
-        <p className="mt-16">
-          I will deliver an experience unlike any other that serves your
-          business goals and keeps it ahead of the competition.
-        </p>
+        <p className="mt-16">{service_header.description}</p>
       </div>
       <div
         className="services-right flex-1 w-full md:w-1/3 pl-0 md:pl-20"
@@ -52,6 +49,12 @@ function Services() {
     </div>
   );
 }
+
+const service_header = {
+  title: "Services",
+  description:
+    "I will deliver an experience unlike any other that serves your business goals and keeps it ahead of the competition.",
+};
 
 const services = [
   {
