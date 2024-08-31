@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Parallax from "./components/Parallax";
 import Services from "./components/Services";
 import Toolkit from "./components/Toolkit";
+import Certifications from "./components/Certifications";
 import Works from "./components/Works";
 import Contact from "./components/Contact";
 import useLocoScroll from "./hooks/locomotiveScroll/useLocoScroll";
@@ -67,8 +68,10 @@ const App = () => {
             <About />
             {/* Services section */}
             <Services />
-            {/* Stack section */}
+            {/* Toolkit section */}
             <Toolkit />
+            {/* Certifications section */}
+            <Certifications />
             {/* Works section */}
             <Works />
           </section>

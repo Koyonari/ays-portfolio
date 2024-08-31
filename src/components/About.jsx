@@ -13,7 +13,7 @@ function About() {
       />
 
       <div className="hero-container w-[60vw]" id="about">
-        <h2 className="text-[8rem] leading-[8rem] mb-16 font-general-sans">
+        <h2 className="text-9xl leading-[8rem] mb-16 font-general-sans">
           <span>{about.title}</span>
         </h2>
         <p className="text-[2rem] leading-loose">

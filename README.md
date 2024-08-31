@@ -17,3 +17,6 @@ An Yong Shyan
 - React.js
 - TailwindCSS
 - Node.js
+- Lucide-react
+- LocomotiveScroll
+- Gsap

@@ -12,12 +12,12 @@ function Services() {
   return (
     <div className="services flex h-[55vh]">
       <div className="services-left w-[45vw] ml-24">
-        <h2 className="text-[8rem] md:text-[6rem] mb-1 mt-8 font-general-sans">
+        <h2 className="text-9xl font-extrabold font-general-sans">
           {service_header.title}
         </h2>
-        <p className="mt-16">{service_header.description}</p>
+        <p className="mt-8">{service_header.description}</p>
       </div>
-      <div className="services-right w-[55vw] ml-40" id="services">
+      <div className="services-right w-[55vw] ml-32 mt-12" id="services">
         {services.map((service, index) => (
           <div key={index} className="services-box mb-8">
             <h3
