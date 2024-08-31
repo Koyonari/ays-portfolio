@@ -9,7 +9,7 @@ import band from "../images/band.png";
 function Works() {
   return (
     <div className="works" id="works">
-      <h2 className="text-9xl font-general-sans mt-32 mb-16 w-screen">
+      <h2 className="text-9xl font-general-sans mb-16 w-screen ml-6">
         Recent Works.
       </h2>
 

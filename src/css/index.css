@@ -1,11 +1,10 @@
 @import url("./general-sans.css");
+@import url("./clash-display.css");
 
 body {
   margin: 0;
   padding: 0;
   font-family: "GeneralSans-Regular";
-  height: 100%;
-  width: 100%;
 }
 
 .menu-active {
@@ -132,6 +131,10 @@ body {
   }
 }
 /* About end */
+
+.stack-list {
+  font-family: "ClashDisplay-Bold";
+}
 
 /* Works start */
 .works-box1 {

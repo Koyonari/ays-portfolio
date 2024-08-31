@@ -10,26 +10,23 @@ function Services() {
   };
 
   return (
-    <div className="services flex p-8">
-      <div className="services-left flex-1 w-[50vw]">
+    <div className="services flex h-[55vh]">
+      <div className="services-left w-[45vw] ml-24">
         <h2 className="text-[8rem] md:text-[6rem] mb-1 mt-8 font-general-sans">
           {service_header.title}
         </h2>
         <p className="mt-16">{service_header.description}</p>
       </div>
-      <div
-        className="services-right flex-1 w-full md:w-1/3 pl-0 md:pl-20"
-        id="services"
-      >
+      <div className="services-right w-[55vw] ml-40" id="services">
         {services.map((service, index) => (
           <div key={index} className="services-box mb-8">
             <h3
-              className="bg-white text-black p-4 rounded-[20px] flex items-center cursor-pointer relative font-extrabold"
+              className="bg-white text-black p-4 rounded-[20px] flex items-center cursor-pointer relative font-extrabold mr-8"
               onClick={() => handleBoxClick(index)}
             >
               {service.title}
               <span
-                className={`absolute right-[5.5rem] transition ease-in-out duration-1000 ${
+                className={`absolute right-[5.5rem] transition ease-in-out duration-1000 mr-[-4rem] ${
                   activeBox === index ? "rotate-45" : ""
                 }`}
               >
@@ -37,7 +34,7 @@ function Services() {
               </span>
             </h3>
             <p
-              className={`mt-2 ml-5 ${
+              className={`mt-2 ml-4 ${
                 activeBox === index ? "block" : "hidden"
               }`}
             >
@@ -56,12 +53,6 @@ const service_header = {
     "I focus on both front-end and back-end development, crafting elegant interfaces and building impactful software tailored to your needs and wants.",
 };
 
-const expertise = {
-  e1: "Web Development",
-  e2: "Back-End Development",
-  e3: "Software Development",
-};
-
 const services = [
   {
     title: "Software Development",
@@ -69,12 +60,12 @@ const services = [
       "Building impactful software tailored to your needs and wants that solves problems quickly and elegantly.",
   },
   {
-    title: "Front-End Development",
+    title: "Back-End Development",
     description:
       "Crafting elegant interfaces that provide seamless user experiences tailored to your brand with a focus on accessibility and engagement.",
   },
   {
-    title: "Web Design",
+    title: "Web Development",
     description:
       "Creating and tailoring your needs and wants to an engaging and eye-candy experience by enhancing your brand and business goals while using suitable clean and modern typography.",
   },
