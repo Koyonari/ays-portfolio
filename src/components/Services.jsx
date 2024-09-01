@@ -15,7 +15,7 @@ function Services() {
         <h2 className="text-9xl font-extrabold font-general-sans">
           {service_header.title}
         </h2>
-        <p className="mt-8">{service_header.description}</p>
+        <p className="mt-8 leading-10">{service_header.description}</p>
       </div>
       <div className="services-right w-[55vw] ml-32 mt-12" id="services">
         {services.map((service, index) => (

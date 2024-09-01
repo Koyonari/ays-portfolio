@@ -15,6 +15,7 @@ An Yong Shyan
 #### Technologies Used
 
 - React.js
+- React Bootstrap
 - TailwindCSS
 - Node.js
 - Lucide-react
