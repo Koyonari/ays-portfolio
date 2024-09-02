@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Carousel from "react-bootstrap/Carousel";
-import "bootstrap/dist/css/bootstrap.css"; //TODO: Isolate bootstrap to only certifications;
+import "../css/certs.scss";
 
 // Import certification images
 import ycep from "../images/certs/NYP YCEP 2021 Certificate.png";
@@ -144,18 +144,22 @@ const Certifications = () => {
   };
 
   return (
-    <div className="relative w-full flex flex-col items-center justify-center mb-36">
+    <div
+      className={
+        "relative w-full flex flex-col items-center justify-center mb-36"
+      }
+    >
       <Carousel
         activeIndex={index}
         onSelect={handleSelect}
         prevIcon={
-          <button className="text-black bg-white hover:text-white hover:bg-black rounded-full">
-            <ChevronLeft size={60} />
+          <button className="rounded-full">
+            <ChevronLeft size={80} />
           </button>
         }
         nextIcon={
-          <button className="text-black bg-white hover:text-white hover:bg-black rounded-full">
-            <ChevronRight size={60} />
+          <button className="rounded-full">
+            <ChevronRight size={80} />
           </button>
         }
         className="w-screen"
@@ -172,8 +176,8 @@ const Certifications = () => {
             />
             <Carousel.Caption>
               <h3>{cert.title}</h3>
-              <p>Issuer: {cert.issuer}</p>
-              <p>Year: {cert.year}</p>
+              <p>{cert.issuer}</p>
+              <p>{cert.year}</p>
             </Carousel.Caption>
           </Carousel.Item>
         ))}

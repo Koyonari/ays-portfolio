@@ -71,7 +71,7 @@ const App = () => {
             {/* Toolkit section */}
             <Toolkit />
             {/* Certifications section */}
-            <Certifications /> {/* TODO: Make bootstrap isolate to certs only*/}
+            <Certifications />
             {/* Works section */}
             <Works />
           </section>
