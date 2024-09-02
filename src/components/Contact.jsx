@@ -3,38 +3,43 @@ import "../css/index.css";
 function Contact() {
   return (
     <section
+      id="contact"
       className="contact-section flex flex-col items-center mb-8"
       data-scroll-section
     >
-      <h2 className="contact-h2 text-5xl md:text-7xl font-semibold text-black text-center mt-8 mb-12">
-        <u>Get in touch.</u>
+      <h2 className="contact-h2 text-5xl md:text-7xl font-semibold text-black text-center mt-8 mb-12 bold">
+        - Get in touch -
       </h2>
       <div className="flex flex-col md:flex-row w-full justify-center items-center">
         <div className="info-left w-full md:w-1/2 px-4">
-          <div className="info-box bg-black text-white rounded-xl p-6 mb-6">
-            <h3 className="text-2xl mb-4">LinkedIn</h3>
-            <p>
-              <a href="https://www.linkedin.com/in/yong-shyan-an-76ab8a272/">
-                Find more information about me such as certifications, job
-                experiences and education <u>here</u>!
-              </a>
-            </p>
+          <div className="contact-info">
+            <h3 className="text-3xl font-semibold text-black mb-4">
+              Contact Details
+            </h3>
+            <p>yongshyan.an@gmail.com</p>
+            <p>+65 9711 2702</p>
           </div>
-          <div className="info-box bg-black text-white rounded-xl p-6 mb-6">
-            <h3 className="text-2xl mb-4">Github</h3>
-            <p>
-              <a href="https://github.com/Koyonari">
-                Check out more of my projects <u>here</u>!
-              </a>
-            </p>
+          <div className="digital-space">
+            <h3 className="text-3xl font-semibold text-black mb-4">
+              My Digital Spaces
+            </h3>
+            <div className="space">
+              <a href="https://github.com/Koyonari">GitHub</a>
+            </div>
+            <div className="space">
+              <a href="https://github.com/Koyonari">GitHub</a>
+            </div>
+            <div className="space">
+              <a href="https://github.com/Koyonari">GitHub</a>
+            </div>
+            <div className="space">
+              <a href="https://github.com/Koyonari">GitHub</a>
+            </div>
           </div>
-          <div className="info-box bg-black text-white rounded-xl p-6 mb-6">
-            <h3 className="text-2xl mb-4">Monkeytype</h3>
-            <p>
-              <a href="https://monkeytype.com/profile/NovaEclipse">
-                Learn more about my hobby and typing speeds <u>here</u>!
-              </a>
-            </p>
+          <div className="location">
+            <h3 className="text-3xl font-semibold text-black mb-4">Location</h3>
+            <p>Singapore</p>
+            <p>Current local time:</p>
           </div>
         </div>
         <div className="info-right w-full md:w-1/2 px-4 items-center">
