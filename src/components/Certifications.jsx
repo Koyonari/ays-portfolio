@@ -149,6 +149,9 @@ const Certifications = () => {
         "relative w-full flex flex-col items-center justify-center mb-36"
       }
     >
+      <h2 className="text-9xl font-extrabold font-general-sans text-white text-center mt-8 mb-20 bold">
+        Certifications
+      </h2>
       <Carousel
         activeIndex={index}
         onSelect={handleSelect}
@@ -177,7 +180,7 @@ const Certifications = () => {
             <Carousel.Caption>
               <h3>{cert.title}</h3>
               <p>{cert.issuer}</p>
-              <p>{cert.year}</p>
+              <p className="pb-4">{cert.year}</p>
             </Carousel.Caption>
           </Carousel.Item>
         ))}
