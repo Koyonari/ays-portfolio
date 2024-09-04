@@ -5,7 +5,6 @@ function Contact() {
     <section
       id="contact"
       className="contact-section flex flex-col items-center mb-8"
-      data-scroll-section
     >
       <h2 className="contact-h2 text-5xl md:text-7xl font-semibold text-black text-center mt-8 mb-12 bold">
         - Get in touch -
