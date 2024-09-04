@@ -10,7 +10,7 @@ function Services() {
   };
 
   return (
-    <div className="services flex h-[55vh]">
+    <section className="services flex h-[55vh]" data-scroll-section>
       <div className="services-left w-[45vw] ml-24">
         <h2 className="text-9xl font-extrabold font-general-sans">
           {service_header.title}
@@ -43,7 +43,7 @@ function Services() {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 

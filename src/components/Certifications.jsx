@@ -144,10 +144,11 @@ const Certifications = () => {
   };
 
   return (
-    <div
+    <section
       className={
         "relative w-full flex flex-col items-center justify-center mb-36"
       }
+      data-scroll-section
     >
       <h2 className="text-9xl font-extrabold font-general-sans text-white text-center mt-8 mb-20 bold">
         Certifications
@@ -189,7 +190,7 @@ const Certifications = () => {
       <div className="mt-4 text-white">
         {index + 1} of {certifications.length}
       </div>
-    </div>
+    </section>
   );
 };
 
