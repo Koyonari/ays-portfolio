@@ -137,14 +137,6 @@ function Contact() {
                 className="submit-btn w-full px-4 py-2 bg-white text-black border-red-600 border-4 font-semibold rounded-lg cursor-pointer hover:bg-red-600 hover:text-white transition-all duration-300"
               />
             </form>
-            <form
-              action="https://formsubmit.co/yongshyan.an@gmail.com"
-              method="POST"
-            >
-              <input type="text" name="name" required />
-              <input type="email" name="email" required />
-              <button type="submit">Send</button>
-            </form>
           </div>
         </div>
       </div>
