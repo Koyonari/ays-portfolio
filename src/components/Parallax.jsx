@@ -32,37 +32,7 @@ function Parallax() {
   }, []);
 
   return (
-    // <section
-    //   className="parallax transition-opacity duration-500 flex-col ease-in-out w-full h-screen relative flex justify-center items-center transform-style-preserve-3d -z-10"
-    //   data-scroll-section
-    // >
-    //   <img
-    //     className="background absolute flex items-end object-cover z-[-1] w-4/6 h-1/2 translate-z-2 overflow-clip border-4 rounded-3xl"
-    //     src={background}
-    //     alt="Background"
-    //   />
-    //   <div className="foreground text-[6rem] mt-64 translate-z z-[-1] grid place-items-center font-general-sans">
-    //     <h1 className="text-center z-[1]">HEY THERE, I'M YS</h1>
-    //     <h1 className="text-center z-[1]">HEY THERE, I'M YS</h1>
-    //     <h1 className="text-center z-[1]">HEY THERE, I'M YS</h1>
-    //   </div>
-    //   {/* <div className="take-your-time absolute items-center translate-z-2">
-    //     <img
-    //       src={takeyourtime}
-    //       alt="Take your time"
-    //       className="w-[9vw] opacity-60"
-    //     />
-    //     <img
-    //       src={takeyourtime1}
-    //       alt="Take your time"
-    //       className="w-[9vw] opacity-60"
-    //     />
-    //   </div> */}
-    // </section>
-    <section
-      className="parallax transition-opacity duration-500 w-full h-screen relative flex justify-center items-center transform-style-preserve-3d -z-10"
-      data-scroll-section
-    >
+    <section className="parallax transition-opacity duration-500 w-full h-screen relative flex justify-center items-center transform-style-preserve-3d -z-10">
       <div className="absolute inset-0 flex justify-center items-center translate-z-2">
         <img
           className="background object-cover w-4/5 h-1/2 rounded-3xl border-4"

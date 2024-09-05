@@ -1,6 +1,6 @@
 const Toolkit = () => {
   return (
-    <section className="stack flex mb-28" data-scroll-section>
+    <section className="stack flex mb-28">
       <div className="stack-left w-[45vw] ml-24">
         <h2 className="text-9xl font-general-sans mb-16">Digital Toolkit.</h2>
         <p className="text-4xl">

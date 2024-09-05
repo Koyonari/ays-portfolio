@@ -7,13 +7,10 @@ import Toolkit from "./components/Toolkit";
 import Certifications from "./components/Certifications";
 import Works from "./components/Works";
 import Contact from "./components/Contact";
-import useLocoScroll from "./hooks/locomotiveScroll/useLocoScroll";
 import "./css/index.css";
 
 const App = () => {
   const [preloader, setPreloader] = useState(true);
-
-  useLocoScroll(!preloader);
 
   const [slideOut, setSlideOut] = useState(false);
 
@@ -57,7 +54,6 @@ const App = () => {
         </div>
         <div
           id="wrapper"
-          data-scroll-container
           className="wrapper transition-opacity duration-500 ease-in-out w-screen h-screen perspective-100 overflow-y-auto overflow-x-hidden"
         >
           {" "}

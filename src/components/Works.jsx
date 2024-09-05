@@ -8,7 +8,7 @@ import band from "../images/band.png";
 
 function Works() {
   return (
-    <section className="works" id="works" data-scroll-section>
+    <section className="works" id="works">
       <h2 className="text-9xl font-general-sans mb-16 w-screen ml-6">
         Recent Works.
       </h2>

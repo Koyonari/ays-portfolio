@@ -148,7 +148,6 @@ const Certifications = () => {
       className={
         "relative w-full flex flex-col items-center justify-center mb-36"
       }
-      data-scroll-section
     >
       <h2 className="text-9xl font-extrabold font-general-sans text-white text-center mt-8 mb-20 bold">
         Certifications

@@ -4,7 +4,7 @@ import switchBackground from "../images/switch.webp";
 
 function About() {
   return (
-    <section className="hero p-8 flex h-[75vh]" data-scroll-section>
+    <section className="hero p-8 flex h-[75vh]">
       <img
         src={switchBackground}
         alt="Switch"

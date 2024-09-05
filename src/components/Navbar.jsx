@@ -54,7 +54,7 @@ function Navbar() {
   }, [menuActive]);
 
   return (
-    <section className="navbar" data-scroll-section>
+    <section className="navbar">
       <div className="nav-container bg-white top-0 left-0 h-20 text-2xl fixed flex justify-between items-center w-full px-6 py-4">
         <div className="logo">
           <img src={Logo} alt="Logo" className="h-10" />
