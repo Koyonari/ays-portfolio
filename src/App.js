@@ -49,7 +49,7 @@ const App = () => {
         }`}
       >
         {/* Navbar */}
-        <div className="fixed top-0 left-0 w-full z-[10000]">
+        <div className="fixed top-0 left-0 z-[10000]">
           <Navbar />
         </div>
         <div
