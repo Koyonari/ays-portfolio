@@ -154,6 +154,38 @@ body {
 }
 /* Works end */
 
+/* Contact start */
+@keyframes outlineAnimation {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.link-hover {
+  position: relative;
+  text-align: center;
+  padding: 2px 4px;
+}
+
+.link-hover::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: currentColor;
+  transition: width 0.65s ease-in-out;
+}
+
+.link-hover:hover::after {
+  animation: outlineAnimation 0.65s forwards;
+}
+/* Contact end */
+
 /* Tailwind */
 @tailwind base;
 @tailwind components;

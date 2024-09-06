@@ -27,7 +27,7 @@ function About() {
 const about = {
   title: "About Me",
   description:
-    "As a 2nd year Information Technology student at Ngee Ann Polytechnic with a long-standing passion for software and full-stack development, I'm eager to learn and contribute to meaningful projects. I'm seeking a full-time, year-long internship starting in March 2024, where I can apply my skills and passion to the tech industry.",
+    "As a 2nd year Information Technology student at Ngee Ann Polytechnic with a long-standing passion for software and full-stack development, I'm eager to learn and contribute to meaningful projects. I'm seeking a full-time, year-long internship starting in March 2025, where I can apply my skills and passion to the tech industry.",
 };
 
 export default About;
