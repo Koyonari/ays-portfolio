@@ -32,7 +32,10 @@ function Parallax() {
   }, []);
 
   return (
-    <section className="parallax transition-opacity duration-500 w-full h-screen relative flex justify-center items-center transform-style-preserve-3d -z-10">
+    <section
+      id="parallax"
+      className="parallax transition-opacity duration-500 w-full h-screen relative flex justify-center items-center transform-style-preserve-3d -z-10"
+    >
       <div className="absolute inset-0 flex justify-center items-center translate-z-2">
         <img
           className="background object-cover w-4/5 h-1/2 rounded-3xl border-4"

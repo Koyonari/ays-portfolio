@@ -44,7 +44,7 @@ function Contact() {
       id="contact"
       className="contact-section flex flex-col items-center"
     >
-      <h2 className="contact-h2 text-5xl md:text-7xl font-semibold text-black text-center mt-8 mb-12 bold">
+      <h2 className="contact-h2 text-5xl md:text-7xl font-general-sans text-black text-center mt-10 mb-12 bold">
         - Get in touch -
       </h2>
       <div className="flex flex-col md:flex-row w-full justify-center items-center">
@@ -180,10 +180,13 @@ function Contact() {
       <div className="footer font-general-sans mt-32 flex flex-col md:flex-row justify-between items-center w-screen px-6">
         <p className="text-black">&copy; 2024 An Yong Shyan</p>
         <p>Site designed and developed with ❤️</p>
-        <p className="uppercase flex flex-row items-center">
+        <a
+          href="#parallax"
+          className="scroll uppercase flex flex-row items-center cursor-pointer"
+        >
           BACK TO TOP
           <img src={backtotop} alt="backtotop" className="w-16 h-16 ml-2" />
-        </p>
+        </a>
       </div>
     </section>
   );
