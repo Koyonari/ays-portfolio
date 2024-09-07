@@ -1,9 +1,9 @@
 // Works section
 // Import images
 import ictreats from "../images/ictreats.png";
-import programming from "../images/programming.png";
-import devblog from "../images/devblog.png";
-import band from "../images/band.png";
+import portfolio from "../images/portfolio.png";
+import nutriaid from "../images/nutriaid.png";
+import planhub from "../images/planhub.png";
 
 function Works() {
   return (
@@ -17,9 +17,9 @@ function Works() {
           <a href="https://github.com/Koyonari/ays-portfolio">
             <div className="works-box1 flex justify-center items-center rounded-[20px] cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg mb-4">
               <img
-                src={band}
+                src={portfolio}
                 loading="lazy"
-                className="works-img w-[35vw] my-24 mx-12"
+                className="works-img w-[35vw] my-24 mx-12 rounded-2xl"
                 alt="Portfolio"
               />
             </div>
@@ -42,12 +42,12 @@ function Works() {
         </div>
 
         <div className="works-2 w-full">
-          <a href="https://github.com/Koyonari/BED2024Apr_P03_T05">
+          <a href="https://nutriaid-ays.vercel.app/">
             <div className="works-box2 flex justify-center items-center rounded-[20px] cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg mb-4">
               <img
-                src={programming}
+                src={nutriaid}
                 loading="lazy"
-                className="works-img w-[35vw] my-24 mx-12"
+                className="works-img w-[35vw] my-24 mx-12 rounded-2xl"
                 alt="NutriAID"
               />
             </div>
@@ -75,7 +75,7 @@ function Works() {
               <img
                 src={ictreats}
                 loading="lazy"
-                className="works-img w-[35vw] my-24 mx-12"
+                className="works-img w-[35vw] my-24 mx-12 rounded-2xl"
                 alt="I.C.Treats"
               />
             </div>
@@ -99,9 +99,9 @@ function Works() {
           <a href="https://github.com/RISHIKEsH12321/MAD24_P01_Team3">
             <div className="works-box4 flex justify-center items-center rounded-[20px] cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg mb-4">
               <img
-                src={devblog}
+                src={planhub}
                 loading="lazy"
-                className="works-img w-[35vw] my-24 mx-12"
+                className="works-img w-[35vw] my-24 mx-12 rounded-2xl"
                 alt="PlanHub"
               />
             </div>
