@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Logo from "../images/logo.svg";
+import Logo from "../images/components/logo.svg";
 import "../css/index.css";
 
 function Navbar() {

@@ -139,28 +139,28 @@ body {
 
 /* Works start */
 .works-box1 {
-  background-image: url("../images/frame1.png");
+  background-image: url("../images/frames/frame1.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .works-box2 {
-  background-image: url("../images/frame2.png");
+  background-image: url("../images/frames/frame2.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .works-box3 {
-  background-image: url("../images/frame3.png");
+  background-image: url("../images/frames/frame3.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .works-box4 {
-  background-image: url("../images/frame4.png");
+  background-image: url("../images/frames/frame4.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

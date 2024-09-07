@@ -1,9 +1,9 @@
 // Works section
 // Import images
-import ictreats from "../images/ictreats.png";
-import portfolio from "../images/portfolio.png";
-import nutriaid from "../images/nutriaid.png";
-import planhub from "../images/planhub.png";
+import ictreats from "../images/works/ictreats.png";
+import portfolio from "../images/works/portfolio.png";
+import nutriaid from "../images/works/nutriaid.png";
+import planhub from "../images/works/planhub.png";
 
 function Works() {
   return (

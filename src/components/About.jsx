@@ -1,6 +1,6 @@
 // About section
 import "../css/index.css";
-import switchBackground from "../images/switch.webp";
+import switchBackground from "../images/components/switch.webp";
 
 function About() {
   return (

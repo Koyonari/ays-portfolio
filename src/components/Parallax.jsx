@@ -1,7 +1,7 @@
 import { useEffect } from "react";
-import background from "../images/home_bg.svg";
-import takeyourtime from "../images/take-your-time.gif";
-import takeyourtime1 from "../images/take-your-time.png";
+import background from "../images/components/home_bg.svg";
+import takeyourtime from "../images/components/take-your-time.gif";
+import takeyourtime1 from "../images/components/take-your-time.png";
 import Scrollbar from "smooth-scrollbar";
 
 function Parallax() {
