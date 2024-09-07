@@ -14,14 +14,17 @@ function Works() {
 
       <div className="works-container grid gap-12 place-items-center grid-cols-[repeat(auto-fit,_minmax(600px,_1fr))]">
         <div className="works-1">
-          <div className="works-box1 flex justify-center items-center rounded-[20px] cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg mb-4">
-            <img
-              src={band}
-              loading="lazy"
-              className="works-img w-[35vw] my-24 mx-12"
-              alt="Fictional Band Website"
-            />
-          </div>
+          <a href="https://github.com/Koyonari/ays-portfolio">
+            <div className="works-box1 flex justify-center items-center rounded-[20px] cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg mb-4">
+              <img
+                src={band}
+                loading="lazy"
+                className="works-img w-[35vw] my-24 mx-12"
+                alt="Portfolio"
+              />
+            </div>
+          </a>
+
           <p className="flex flex-row mb-6">
             <p className="mt-3 text-2xl border-stone-700 border-[4px] rounded-full p-3 mr-4">
               2024
@@ -38,14 +41,17 @@ function Works() {
         </div>
 
         <div className="works-2">
-          <div className="works-box2 flex justify-center items-center rounded-[20px] cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg mb-4">
-            <img
-              src={ictreats}
-              loading="lazy"
-              className="works-img w-[35vw] my-24 mx-12"
-              alt="I.C.Treats"
-            />
-          </div>
+          <a href="https://github.com/Koyonari/BED2024Apr_P03_T05">
+            <div className="works-box2 flex justify-center items-center rounded-[20px] cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg mb-4">
+              <img
+                src={programming}
+                loading="lazy"
+                className="works-img w-[35vw] my-24 mx-12"
+                alt="NutriAID"
+              />
+            </div>
+          </a>
+
           <p className="flex flex-row mb-6">
             <p className="mt-3 text-2xl border-stone-700 border-[4px] rounded-full p-3 mr-4">
               2024
@@ -62,14 +68,17 @@ function Works() {
         </div>
 
         <div className="works-3">
-          <div className="works-box3 flex justify-center items-center rounded-[20px] cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg mb-4">
-            <img
-              src={programming}
-              loading="lazy"
-              className="works-img w-[35vw] my-24 mx-12"
-              alt="Programming Projects"
-            />
-          </div>
+          <a href="https://github.com/Koyonari/Group03_PRG2Assignment">
+            <div className="works-box3 flex justify-center items-center rounded-[20px] cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg mb-4">
+              <img
+                src={ictreats}
+                loading="lazy"
+                className="works-img w-[35vw] my-24 mx-12"
+                alt="I.C.Treats"
+              />
+            </div>
+          </a>
+
           <p className="flex flex-row mb-6">
             <p className="mt-3 text-2xl border-stone-700 border-[4px] rounded-full p-3 mr-4">
               2024
@@ -85,14 +94,17 @@ function Works() {
         </div>
 
         <div className="works-4">
-          <div className="works-box4 flex justify-center items-center rounded-[20px] cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg mb-4">
-            <img
-              src={devblog}
-              loading="lazy"
-              className="works-img w-[35vw] my-24 mx-12"
-              alt="Front-End Weekly Dev Blog"
-            />
-          </div>
+          <a href="https://github.com/RISHIKEsH12321/MAD24_P01_Team3">
+            <div className="works-box4 flex justify-center items-center rounded-[20px] cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg mb-4">
+              <img
+                src={devblog}
+                loading="lazy"
+                className="works-img w-[35vw] my-24 mx-12"
+                alt="PlanHub"
+              />
+            </div>
+          </a>
+
           <p className="flex flex-row mb-6">
             <p className="mt-3 text-2xl border-stone-700 border-[4px] rounded-full p-3 mr-4">
               2024
