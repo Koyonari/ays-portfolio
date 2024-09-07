@@ -23,10 +23,10 @@ function Works() {
             />
           </div>
           <p className="flex flex-row mb-6">
-            <p className="mt-3 text-2xl border-stone-700 border-[6px] rounded-full p-3 mr-4">
+            <p className="mt-3 text-2xl border-stone-700 border-[4px] rounded-full p-3 mr-4">
               2024
             </p>
-            <p className="mt-3 text-2xl border-stone-700 border-[6px] rounded-full p-3">
+            <p className="mt-3 text-2xl border-stone-700 border-[4px] rounded-full p-3">
               HTML<b className="font-general-sans px-3">·</b>Javascript
               <b className="font-general-sans px-3">·</b>TailwindCSS
             </p>
@@ -47,10 +47,10 @@ function Works() {
             />
           </div>
           <p className="flex flex-row mb-6">
-            <p className="mt-3 text-2xl border-stone-700 border-[6px] rounded-full p-3 mr-4">
+            <p className="mt-3 text-2xl border-stone-700 border-[4px] rounded-full p-3 mr-4">
               2024
             </p>
-            <p className="mt-3 text-2xl border-stone-700 border-[6px] rounded-full p-3">
+            <p className="mt-3 text-2xl border-stone-700 border-[4px] rounded-full p-3">
               HTML<b className="font-general-sans px-3">·</b>CSS
               <b className="font-general-sans px-3">·</b>Javascript
             </p>
@@ -71,10 +71,10 @@ function Works() {
             />
           </div>
           <p className="flex flex-row mb-6">
-            <p className="mt-3 text-2xl border-stone-700 border-[6px] rounded-full p-3 mr-4">
+            <p className="mt-3 text-2xl border-stone-700 border-[4px] rounded-full p-3 mr-4">
               2024
             </p>
-            <p className="mt-3 text-2xl border-stone-700 border-[6px] rounded-full p-3">
+            <p className="mt-3 text-2xl border-stone-700 border-[4px] rounded-full p-3">
               C#<b className="font-general-sans px-3">·</b>Spectre Console
             </p>
           </p>
@@ -94,10 +94,10 @@ function Works() {
             />
           </div>
           <p className="flex flex-row mb-6">
-            <p className="mt-3 text-2xl border-stone-700 border-[6px] rounded-full p-3 mr-4">
+            <p className="mt-3 text-2xl border-stone-700 border-[4px] rounded-full p-3 mr-4">
               2024
             </p>
-            <p className="mt-3 text-2xl border-stone-700 border-[6px] rounded-full p-3">
+            <p className="mt-3 text-2xl border-stone-700 border-[4px] rounded-full p-3">
               Java
             </p>
           </p>
