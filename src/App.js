@@ -7,6 +7,7 @@ import Toolkit from "./components/Toolkit";
 import Certifications from "./components/Certifications";
 import Works from "./components/Works";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 import "./css/index.css";
 
 const App = () => {
@@ -73,6 +74,8 @@ const App = () => {
           </section>
           {/* Contact section */}
           <Contact />
+          {/* Footer */}
+          <Footer />
         </div>
       </div>
     </>
