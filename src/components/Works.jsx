@@ -3,18 +3,17 @@
 import ictreats from "../images/ictreats.png";
 import programming from "../images/programming.png";
 import devblog from "../images/devblog.png";
-import priceio from "../images/priceio.png";
 import band from "../images/band.png";
 
 function Works() {
   return (
-    <section className="works" id="works">
+    <section className="works mb-12" id="works">
       <h2 className="text-9xl font-general-sans mb-16 w-screen ml-6">
         Recent Works.
       </h2>
 
       <div className="works-container grid gap-12 place-items-center grid-cols-[repeat(auto-fit,_minmax(600px,_1fr))]">
-        <div className="works-1">
+        <div className="works-1 cursor-pointer">
           <div className="works-box1 flex justify-center items-center rounded-[20px]">
             <img
               src={band}
@@ -23,12 +22,22 @@ function Works() {
               alt="Fictional Band Website"
             />
           </div>
-          <h3 className="text-3xl font-semibold mt-4">
-            Fictional Band Website
+          <p className="flex flex-row mb-6">
+            <p className="mt-3 text-2xl border-stone-700 border-[6px] rounded-full p-3 mr-4">
+              2024
+            </p>
+            <p className="mt-3 text-2xl border-stone-700 border-[6px] rounded-full p-3">
+              HTML<b className="font-general-sans px-3">·</b>Javascript
+              <b className="font-general-sans px-3">·</b>TailwindCSS
+            </p>
+          </p>
+          <h3 className="link-hover text-4xl font-general-sans uppercase inline-block cursor-pointer">
+            Portfolio
           </h3>
+          <p className="mt-3 text-3xl">Front-End Development</p>
         </div>
 
-        <div className="works-2">
+        <div className="works-2 cursor-pointer">
           <div className="works-box2 flex justify-center items-center rounded-[20px]">
             <img
               src={ictreats}
@@ -37,10 +46,22 @@ function Works() {
               alt="I.C.Treats"
             />
           </div>
-          <h3 className="text-3xl font-semibold mt-4">I.C.Treats</h3>
+          <p className="flex flex-row mb-6">
+            <p className="mt-3 text-2xl border-stone-700 border-[6px] rounded-full p-3 mr-4">
+              2024
+            </p>
+            <p className="mt-3 text-2xl border-stone-700 border-[6px] rounded-full p-3">
+              HTML<b className="font-general-sans px-3">·</b>CSS
+              <b className="font-general-sans px-3">·</b>Javascript
+            </p>
+          </p>
+          <h3 className="link-hover text-4xl font-general-sans uppercase inline-block cursor-pointer">
+            NutriAID
+          </h3>
+          <p className="mt-3 text-3xl">Full-Stack Development</p>
         </div>
 
-        <div className="works-3">
+        <div className="works-3 cursor-pointer">
           <div className="works-box3 flex justify-center items-center rounded-[20px]">
             <img
               src={programming}
@@ -49,10 +70,21 @@ function Works() {
               alt="Programming Projects"
             />
           </div>
-          <h3 className="text-3xl font-semibold mt-4">Programming Projects</h3>
+          <p className="flex flex-row mb-6">
+            <p className="mt-3 text-2xl border-stone-700 border-[6px] rounded-full p-3 mr-4">
+              2024
+            </p>
+            <p className="mt-3 text-2xl border-stone-700 border-[6px] rounded-full p-3">
+              C#<b className="font-general-sans px-3">·</b>Spectre Console
+            </p>
+          </p>
+          <h3 className="link-hover text-4xl font-general-sans uppercase inline-block cursor-pointer">
+            I.C.Treats
+          </h3>
+          <p className="mt-3 text-3xl">Back-End Development</p>
         </div>
 
-        <div className="works-4">
+        <div className="works-4 cursor-pointer">
           <div className="works-box4 flex justify-center items-center rounded-[20px]">
             <img
               src={devblog}
@@ -61,24 +93,18 @@ function Works() {
               alt="Front-End Weekly Dev Blog"
             />
           </div>
-          <h3 className="text-3xl font-semibold mt-4">
-            Front-End Weekly Dev Blog
-          </h3>
-        </div>
-      </div>
-
-      <div className="works-center flex justify-center items-center mx-auto w-[90vw] mt-8">
-        <div className="works-box5 flex flex-col justify-center items-center">
-          <img
-            src={priceio}
-            loading="lazy"
-            className="works-img1 w-full mb-5 rounded-[20px] border-white border-2"
-            alt="Price.io"
-          />
-          <h3 className="text-3xl font-semibold mt-4">Price.io</h3>
-          <p className="text-center text-2xl mt-2">
-            Gamified global inflation tracker aided with the use of an API
+          <p className="flex flex-row mb-6">
+            <p className="mt-3 text-2xl border-stone-700 border-[6px] rounded-full p-3 mr-4">
+              2024
+            </p>
+            <p className="mt-3 text-2xl border-stone-700 border-[6px] rounded-full p-3">
+              Java
+            </p>
           </p>
+          <h3 className="link-hover text-4xl font-general-sans uppercase inline-block cursor-pointer">
+            PlanHub
+          </h3>
+          <p className="mt-3 text-3xl">Mobile Application Development</p>
         </div>
       </div>
     </section>

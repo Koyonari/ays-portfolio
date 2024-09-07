@@ -131,7 +131,10 @@ function Contact() {
 
             <div className="space flex flex-row items-center">
               <img className="github w-6 h-6 mr-2" src={github} alt="github" />
-              <a href="https://github.com/Koyonari" className="link-hover">
+              <a
+                href="https://github.com/Koyonari"
+                className="link-hover text-center py-0.5 px-1"
+              >
                 GitHub
               </a>
             </div>
@@ -144,7 +147,7 @@ function Contact() {
               />
               <a
                 href="https://www.linkedin.com/in/yong-shyan-an-76ab8a272/"
-                className="link-hover"
+                className="link-hover text-center py-0.5 px-1"
               >
                 LinkedIn
               </a>
@@ -158,7 +161,7 @@ function Contact() {
               />
               <a
                 href="https://monkeytype.com/profile/NovaEclipse"
-                className="link-hover"
+                className="link-hover text-center py-0.5 px-1"
               >
                 MonkeyType
               </a>
