@@ -146,7 +146,7 @@ const Certifications = () => {
   return (
     <section
       className={
-        "relative w-full flex flex-col items-center justify-center mb-36"
+        "relative w-full flex flex-col items-center justify-center mb-24"
       }
     >
       <h2 className="text-9xl font-extrabold font-general-sans text-white text-center mt-8 mb-20 bold">

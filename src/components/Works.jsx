@@ -7,13 +7,13 @@ import band from "../images/band.png";
 
 function Works() {
   return (
-    <section className="works mb-12" id="works">
-      <h2 className="text-9xl font-general-sans mb-16 w-screen ml-6">
+    <section className="works m-12" id="works">
+      <h2 className="text-9xl font-general-sans mb-16 w-screen">
         Recent Works.
       </h2>
 
-      <div className="works-container grid gap-12 place-items-center grid-cols-[repeat(auto-fit,_minmax(600px,_1fr))]">
-        <div className="works-1">
+      <div className="works-container grid gap-16 place-items-center grid-cols-[repeat(auto-fit,_minmax(600px,_1fr))]">
+        <div className="works-1 w-full">
           <a href="https://github.com/Koyonari/ays-portfolio">
             <div className="works-box1 flex justify-center items-center rounded-[20px] cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg mb-4">
               <img
@@ -32,6 +32,7 @@ function Works() {
             <p className="mt-3 text-2xl border-stone-700 border-[4px] rounded-full p-3">
               HTML<b className="font-general-sans px-3">·</b>Javascript
               <b className="font-general-sans px-3">·</b>TailwindCSS
+              <b className="font-general-sans px-3">·</b>React.js
             </p>
           </p>
           <h3 className="link-hover text-4xl font-general-sans uppercase inline-block cursor-pointer">
@@ -40,7 +41,7 @@ function Works() {
           <p className="mt-3 text-3xl">Front-End Development</p>
         </div>
 
-        <div className="works-2">
+        <div className="works-2 w-full">
           <a href="https://github.com/Koyonari/BED2024Apr_P03_T05">
             <div className="works-box2 flex justify-center items-center rounded-[20px] cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg mb-4">
               <img
@@ -59,6 +60,7 @@ function Works() {
             <p className="mt-3 text-2xl border-stone-700 border-[4px] rounded-full p-3">
               HTML<b className="font-general-sans px-3">·</b>CSS
               <b className="font-general-sans px-3">·</b>Javascript
+              <b className="font-general-sans px-3">·</b>Node.js
             </p>
           </p>
           <h3 className="link-hover text-4xl font-general-sans uppercase inline-block cursor-pointer">
@@ -67,7 +69,7 @@ function Works() {
           <p className="mt-3 text-3xl">Full-Stack Development</p>
         </div>
 
-        <div className="works-3">
+        <div className="works-3 w-full">
           <a href="https://github.com/Koyonari/Group03_PRG2Assignment">
             <div className="works-box3 flex justify-center items-center rounded-[20px] cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg mb-4">
               <img
@@ -93,7 +95,7 @@ function Works() {
           <p className="mt-3 text-3xl">Back-End Development</p>
         </div>
 
-        <div className="works-4">
+        <div className="works-4 w-full">
           <a href="https://github.com/RISHIKEsH12321/MAD24_P01_Team3">
             <div className="works-box4 flex justify-center items-center rounded-[20px] cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg mb-4">
               <img
