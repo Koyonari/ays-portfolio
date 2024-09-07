@@ -1,16 +1,14 @@
-// Services section
-import { useState } from "react";
+import React, { useState } from "react";
 
 function Services() {
   const [activeBox, setActiveBox] = useState(null);
 
   const handleBoxClick = (index) => {
-    // Toggle the clicked box's state
     setActiveBox(activeBox === index ? null : index);
   };
 
   return (
-    <section className="services flex h-[55vh]">
+    <section className="services flex h-[57.5vh]">
       <div className="services-left w-[45vw] ml-24">
         <h2 className="text-9xl font-extrabold font-general-sans">
           {service_header.title}
@@ -21,25 +19,29 @@ function Services() {
         {services.map((service, index) => (
           <div key={index} className="services-box mb-8">
             <h3
-              className="bg-white text-black p-4 rounded-[20px] flex items-center cursor-pointer relative font-extrabold mr-8"
+              className="bg-white text-black p-4 rounded-[20px] flex items-center justify-between cursor-pointer relative font-extrabold"
               onClick={() => handleBoxClick(index)}
             >
               {service.title}
               <span
-                className={`absolute right-[5.5rem] transition ease-in-out duration-1000 mr-[-4rem] ${
+                className={`transition-transform duration-300 ease-in-out ${
                   activeBox === index ? "rotate-45" : ""
                 }`}
               >
                 +
               </span>
             </h3>
-            <p
-              className={`mt-2 ml-4 ${
-                activeBox === index ? "block" : "hidden"
+            <div
+              className={`grid transition-all duration-300 ease-in-out ${
+                activeBox === index
+                  ? "grid-rows-[1fr] opacity-100"
+                  : "grid-rows-[0fr] opacity-0"
               }`}
             >
-              {service.description}
-            </p>
+              <div className="overflow-hidden">
+                <p className="mt-2 ml-4 p-4">{service.description}</p>
+              </div>
+            </div>
           </div>
         ))}
       </div>
