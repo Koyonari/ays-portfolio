@@ -95,23 +95,17 @@ body {
   }
 }
 
-@media screen and (max-width: 1275px) {
+@media screen and (max-width: 1280px) {
   .foreground h1 {
-    font-size: 5.5rem;
-    text-align: center;
-    margin: 0;
-  }
-  .foreground .staggered {
-    text-align: center;
-    margin: 0;
+    font-size: 3.5rem;
+    -webkit-text-stroke: 3.5px;
   }
 }
 
 @media (max-width: 768px) {
-  .foreground p {
-    width: 90vw;
-    text-align: center;
-    margin: 0;
+  .foreground h1 {
+    font-size: 2.5rem;
+    -webkit-text-stroke: 2.5px;
   }
   .hero {
     flex-direction: column;
@@ -129,6 +123,30 @@ body {
   }
   .hero-container p {
     font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .foreground h1 {
+    font-size: 2rem;
+    -webkit-text-stroke: 2px;
+  }
+  .hero {
+    flex-direction: column;
+  }
+  .hero-img {
+    width: 100%;
+    height: 100%;
+  }
+  .hero-container {
+    width: 100%;
+    font-size: 1.5rem;
+  }
+  .hero-container > h2 {
+    font-size: 3rem;
+  }
+  .hero-container p {
+    font-size: 1.5rem;
   }
 }
 /* About end */

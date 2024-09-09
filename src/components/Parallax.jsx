@@ -43,21 +43,21 @@ function Parallax() {
           alt="Background"
         />
       </div>
-      <div className="foreground relative z-10 text-[6rem] text-center font-general-sans flex flex-col">
+      <div className="foreground relative z-10 text-[4.5rem] text-center font-general-sans flex flex-col">
         <h1>HEY THERE, I'M YS</h1>
         <h1 className="text-outline-only">HEY THERE, I'M YS</h1>
         <h1>HEY THERE, I'M YS</h1>
-        <div className="take-your-time absolute bottom-[-27.5vh] flex justify-center w-full">
-          <div className="flex-col">
+        <div className="take-your-time absolute xl:bottom-[-20vh] lg:bottom-[-28vh] bottom-[-35vh] flex justify-center w-full">
+          <div className="time flex-col">
             <img
               src={takeyourtime}
               alt="Take your time"
-              className="w-[9vw] opacity-60"
+              className="w-[12vh] opacity-60"
             />
             <img
               src={takeyourtime1}
               alt="Take your time"
-              className="w-[9vw] opacity-60"
+              className="w-[12vh] opacity-60"
             />
           </div>
         </div>

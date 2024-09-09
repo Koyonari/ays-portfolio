@@ -60,7 +60,7 @@ function Navbar() {
           <img src={Logo} alt="Logo" className="h-10" />
         </div>
 
-        <div className="nav-links hidden sm:flex">
+        <div className="nav-links hidden lg:flex">
           <a
             href="#about"
             className="nav-link text-black leading-[3rem] no-underline transition-all duration-500 ease-in-out mx-5"
@@ -88,7 +88,7 @@ function Navbar() {
         </div>
 
         <div
-          className={`hamburger cursor-pointer z-[99999] sm:hidden ${
+          className={`hamburger cursor-pointer z-[99999] lg:hidden ${
             menuActive ? "active" : ""
           }`}
           onClick={toggleMenu}
