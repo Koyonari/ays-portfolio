@@ -19,7 +19,7 @@ function Works() {
               <img
                 src={portfolio}
                 loading="lazy"
-                className="works-img w-[35vw] my-24 mx-12 rounded-2xl"
+                className="works-img h-[45vh] my-24 mx-12 rounded-2xl"
                 alt="Portfolio"
               />
             </div>
@@ -47,7 +47,7 @@ function Works() {
               <img
                 src={nutriaid}
                 loading="lazy"
-                className="works-img w-[35vw] my-24 mx-12 rounded-2xl"
+                className="works-img h-[35vh] my-24 mx-12 rounded-2xl"
                 alt="NutriAID"
               />
             </div>
@@ -66,7 +66,7 @@ function Works() {
           <h3 className="link-hover text-4xl font-general-sans uppercase inline-block cursor-pointer">
             NutriAID
           </h3>
-          <p className="mt-3 text-3xl">Full-Stack Development</p>
+          <p className="mt-3 text-3xl">Back-End Development</p>
         </div>
 
         <div className="works-3 w-full">
