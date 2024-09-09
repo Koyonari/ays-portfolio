@@ -55,7 +55,7 @@ function Navbar() {
 
   return (
     <section className="navbar">
-      <div className="nav-container bg-white top-0 left-0 h-20 text-2xl fixed flex justify-between items-center w-[calc(100%-17px)] px-6 py-4 font-extrabold">
+      <div className="nav-container bg-white top-0 left-0 h-20 text-2xl fixed flex justify-between items-center w-[calc(100%-17px)] max-md:w-full px-6 py-4 font-extrabold">
         <div className="logo">
           <img src={Logo} alt="Logo" className="h-10" />
         </div>

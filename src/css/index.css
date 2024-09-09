@@ -8,6 +8,7 @@ body {
   scroll-behavior: smooth;
 }
 
+/* Navbar Animation start */
 .menu-active {
   overflow: hidden !important;
 }
@@ -27,7 +28,11 @@ body {
   transition: transform 0.4s ease-in-out, visibility 0s linear 0.3s,
     opacity 0.4s ease-in-out;
 }
+/* Navbar Animation end */
 
+/* Responsiveness start */
+
+/* Navbar start */
 @media (max-width: 720px) {
   .nav-menu {
     position: fixed;
@@ -69,6 +74,31 @@ body {
 }
 /* Navbar end */
 
+/* Parallax start */
+@media screen and (max-width: 1280px) {
+  .foreground h1 {
+    font-size: 3.5rem;
+    -webkit-text-stroke: 3.5px;
+  }
+}
+
+@media (max-width: 768px) {
+  .foreground h1 {
+    font-size: 2.5rem;
+    -webkit-text-stroke: 2.5px;
+  }
+}
+
+@media (max-width: 425px) {
+  .foreground h1 {
+    font-size: 2rem;
+    -webkit-text-stroke: 2px;
+  }
+}
+/* Parallax end */
+
+/* Responsive end */
+
 /* About start */
 .hero-container span {
   color: hsl(0 0% 100% / 0.2);
@@ -94,68 +124,13 @@ body {
     background-size: 100% 100%;
   }
 }
-
-@media screen and (max-width: 1280px) {
-  .foreground h1 {
-    font-size: 3.5rem;
-    -webkit-text-stroke: 3.5px;
-  }
-}
-
-@media (max-width: 768px) {
-  .foreground h1 {
-    font-size: 2.5rem;
-    -webkit-text-stroke: 2.5px;
-  }
-  .hero {
-    flex-direction: column;
-  }
-  .hero-img {
-    width: 100%;
-    height: 100%;
-  }
-  .hero-container {
-    width: 100%;
-    font-size: 1.5rem;
-  }
-  .hero-container > h2 {
-    font-size: 4rem;
-  }
-  .hero-container p {
-    font-size: 1.75rem;
-  }
-}
-
-@media (max-width: 425px) {
-  .foreground h1 {
-    font-size: 2rem;
-    -webkit-text-stroke: 2px;
-  }
-  .hero {
-    flex-direction: column;
-  }
-  .hero-img {
-    width: 100%;
-    height: 100%;
-  }
-  .hero-container {
-    width: 100%;
-    font-size: 1.5rem;
-  }
-  .hero-container > h2 {
-    font-size: 3rem;
-  }
-  .hero-container p {
-    font-size: 1.5rem;
-  }
-}
 /* About end */
 
 .stack-list {
   font-family: "ClashDisplay-Bold";
 }
 
-/* Works start */
+/* Works Image start */
 .works-box1 {
   background-image: url("../images/frames/frame1.png");
   background-size: cover;
@@ -183,9 +158,9 @@ body {
   background-position: center;
   background-repeat: no-repeat;
 }
-/* Works end */
+/* Works Image end */
 
-/* Contact start */
+/* Contact Animation start */
 @keyframes outlineAnimation {
   0% {
     width: 0;
@@ -213,7 +188,7 @@ body {
 .link-hover:hover::after {
   animation: outlineAnimation 0.65s forwards;
 }
-/* Contact end */
+/* Contact Animation end */
 
 /* Tailwind */
 @tailwind base;

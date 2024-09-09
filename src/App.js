@@ -57,7 +57,6 @@ const App = () => {
           id="wrapper"
           className="wrapper transition-opacity duration-500 ease-in-out w-screen h-screen perspective-100 overflow-y-auto overflow-x-hidden"
         >
-          {" "}
           {/* Parallax */}
           <Parallax />
           {/* About/Hero section */}
