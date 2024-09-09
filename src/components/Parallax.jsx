@@ -47,7 +47,7 @@ function Parallax() {
         <h1>HEY THERE, I'M YS</h1>
         <h1 className="text-outline-only">HEY THERE, I'M YS</h1>
         <h1>HEY THERE, I'M YS</h1>
-        <div className="take-your-time absolute xl:bottom-[-20vh] lg:bottom-[-28vh] bottom-[-35vh] flex justify-center w-full">
+        <div className="take-your-time absolute xl:bottom-[-20vh] lg:bottom-[-28vh] md:bottom-[-27vh] bottom-[-35vh] flex justify-center w-full">
           <div className="time flex-col">
             <img
               src={takeyourtime}
