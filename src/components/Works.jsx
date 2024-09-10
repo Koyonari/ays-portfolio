@@ -12,14 +12,41 @@ function Works() {
         Recent Works.
       </h2>
 
-      <div className="works-container grid gap-16 place-items-center grid-cols-[repeat(auto-fit,_minmax(600px,_1fr))]">
-        <div className="works-1 w-full">
-          <a href="https://github.com/Koyonari/ays-portfolio">
+      <div className="works-container w-full grid gap-16 place-items-center grid-cols-[repeat(auto-fit,_minmax(600px,_1fr))]">
+        <div className="works-1">
+          <a href="https://nutriaid-ays.vercel.app/">
             <div className="works-box1 flex justify-center items-center rounded-[20px] cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg mb-4">
+              <img
+                src={nutriaid}
+                loading="lazy"
+                className="works-img w-4/5 my-24 mx-12 rounded-2xl"
+                alt="NutriAID"
+              />
+            </div>
+          </a>
+
+          <p className="flex flex-row mb-6">
+            <p className="mt-3 text-2xl border-stone-700 border-[4px] rounded-full p-3 mr-4">
+              2024
+            </p>
+            <p className="mt-3 text-2xl border-stone-700 border-[4px] rounded-full p-3">
+              HTML<b className="font-general-sans px-3">·</b>CSS
+              <b className="font-general-sans px-3">·</b>Javascript
+              <b className="font-general-sans px-3">·</b>Node.js
+            </p>
+          </p>
+          <h3 className="link-hover text-4xl font-general-sans uppercase inline-block cursor-pointer">
+            NutriAID
+          </h3>
+          <p className="mt-3 text-3xl">Back-End Development</p>
+        </div>
+        <div className="works-2">
+          <a href="https://github.com/Koyonari/ays-portfolio">
+            <div className="works-box2 flex justify-center items-center rounded-[20px] cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg mb-4">
               <img
                 src={portfolio}
                 loading="lazy"
-                className="works-img h-[45vh] my-24 mx-12 rounded-2xl"
+                className="works-img w-4/5 my-24 mx-12 rounded-2xl"
                 alt="Portfolio"
               />
             </div>
@@ -41,41 +68,13 @@ function Works() {
           <p className="mt-3 text-3xl">Front-End Development</p>
         </div>
 
-        <div className="works-2 w-full">
-          <a href="https://nutriaid-ays.vercel.app/">
-            <div className="works-box2 flex justify-center items-center rounded-[20px] cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg mb-4">
-              <img
-                src={nutriaid}
-                loading="lazy"
-                className="works-img h-[35vh] my-24 mx-12 rounded-2xl"
-                alt="NutriAID"
-              />
-            </div>
-          </a>
-
-          <p className="flex flex-row mb-6">
-            <p className="mt-3 text-2xl border-stone-700 border-[4px] rounded-full p-3 mr-4">
-              2024
-            </p>
-            <p className="mt-3 text-2xl border-stone-700 border-[4px] rounded-full p-3">
-              HTML<b className="font-general-sans px-3">·</b>CSS
-              <b className="font-general-sans px-3">·</b>Javascript
-              <b className="font-general-sans px-3">·</b>Node.js
-            </p>
-          </p>
-          <h3 className="link-hover text-4xl font-general-sans uppercase inline-block cursor-pointer">
-            NutriAID
-          </h3>
-          <p className="mt-3 text-3xl">Back-End Development</p>
-        </div>
-
         <div className="works-3 w-full">
           <a href="https://github.com/Koyonari/Group03_PRG2Assignment">
             <div className="works-box3 flex justify-center items-center rounded-[20px] cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg mb-4">
               <img
                 src={ictreats}
                 loading="lazy"
-                className="works-img w-[35vw] my-24 mx-12 rounded-2xl"
+                className="works-img w-4/5 my-24 mx-12 rounded-2xl"
                 alt="I.C.Treats"
               />
             </div>
@@ -101,7 +100,7 @@ function Works() {
               <img
                 src={planhub}
                 loading="lazy"
-                className="works-img w-[35vw] my-24 mx-12 rounded-2xl"
+                className="works-img w-4/5 my-24 mx-12 rounded-2xl"
                 alt="PlanHub"
               />
             </div>
