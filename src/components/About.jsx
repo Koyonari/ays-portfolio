@@ -4,7 +4,7 @@ import switchBackground from "../images/components/switch.webp";
 
 function About() {
   return (
-    <section className="hero p-4 flex flex-col md:flex-row md:p-8 xl:mb-24 items-center">
+    <section className="hero p-4 flex flex-col md:flex-row md:p-8 items-center">
       <img
         src={switchBackground}
         alt="Switch"
@@ -16,7 +16,7 @@ function About() {
         <h2 className="text-5xl md:text-6xl lg:text-8xl xl:text-9xl mb-8 md:mb-16 font-general-sans">
           <span>{about.title}</span>
         </h2>
-        <p className="text-xl md:text-2xl lg:text-3xl xl:text-4xl leading-normal md:leading-relaxed lg:leading-relaxed xl:leading-relaxed w-full">
+        <p className="text-base md:text-2xl lg:text-3xl xl:text-4xl leading-normal md:leading-relaxed lg:leading-relaxed xl:leading-relaxed w-full">
           <span>{about.description}</span>
         </p>
       </div>

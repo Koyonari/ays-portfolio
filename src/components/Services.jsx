@@ -13,7 +13,7 @@ function Services() {
         <h2 className="text-5xl md:text-6xl lg:text-8xl xl:text-9xl font-general-sans">
           {service_header.title}
         </h2>
-        <p className="mt-8 text-xl md:text-2xl lg:text-3xl xl:text-4xl leading-normal md:leading-relaxed lg:leading-relaxed xl:leading-relaxed w-full">
+        <p className="mt-8 text-base md:text-2xl lg:text-3xl xl:text-4xl leading-normal md:leading-relaxed lg:leading-relaxed xl:leading-relaxed w-full">
           {service_header.description}
         </p>
       </div>
@@ -44,7 +44,7 @@ function Services() {
               }`}
             >
               <div className="overflow-hidden">
-                <p className="mt-2 ml-2 sm:ml-4 py-4 text-xl md:text-3xl xl:text-4xl leading-normal md:leading-relaxed lg:leading-relaxed xl:leading-relaxed">
+                <p className="mt-2 ml-2 sm:ml-4 py-4 text-base md:text-3xl xl:text-4xl leading-normal md:leading-relaxed lg:leading-relaxed xl:leading-relaxed">
                   {service.description}
                 </p>
               </div>

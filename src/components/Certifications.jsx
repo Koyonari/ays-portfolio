@@ -144,51 +144,64 @@ const Certifications = () => {
   };
 
   return (
-    <section
-      className={
-        "relative w-full flex flex-col items-center justify-center mb-24"
-      }
-    >
-      <h2 className="text-9xl font-extrabold font-general-sans text-white text-center mt-8 mb-20 bold">
+    <section className="relative w-full flex flex-col items-center justify-center mb-8 px-4">
+      <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-general-sans text-center mb-4 md:mb-8 lg:mb-12">
         Certifications
       </h2>
-      <Carousel
-        activeIndex={index}
-        onSelect={handleSelect}
-        prevIcon={
-          <button className="rounded-full">
-            <ChevronLeft size={80} />
-          </button>
-        }
-        nextIcon={
-          <button className="rounded-full">
-            <ChevronRight size={80} />
-          </button>
-        }
-        className="w-screen"
-      >
-        {certifications.map((cert, idx) => (
-          <Carousel.Item
-            key={cert.id}
-            className="h-[70vh] flex justify-center items-center"
-          >
-            <img
-              src={cert.image}
-              alt={cert.title}
-              className="h-[50vh] object-contain mx-auto"
-            />
-            <Carousel.Caption>
-              <h3>{cert.title}</h3>
-              <p>{cert.issuer}</p>
-              <p className="pb-4">{cert.year}</p>
-            </Carousel.Caption>
-          </Carousel.Item>
-        ))}
-      </Carousel>
-
-      <div className="mt-4 text-white">
+      <div className="w-full">
+        <Carousel
+          activeIndex={index}
+          onSelect={handleSelect}
+          prevIcon={null}
+          nextIcon={null}
+          className="w-full"
+        >
+          {certifications.map((cert) => (
+            <Carousel.Item
+              key={cert.id}
+              className="items-center justify-center py-8"
+            >
+              <div className="w-full flex justify-center items-center mb-4">
+                <img
+                  src={cert.image}
+                  alt={cert.title}
+                  className="h-[40vh] w-full object-contain"
+                />
+              </div>
+              <div className="text-center rounded w-full h-[16vh] sm:h-[15vh] md:h-[16vh]">
+                <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-2">
+                  {cert.title}
+                </h3>
+                <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-1">
+                  {cert.issuer}
+                </p>
+                <p className="text-base sm:text-lg md:text-xl lg:text-2xl">
+                  {cert.year}
+                </p>
+              </div>
+            </Carousel.Item>
+          ))}
+        </Carousel>
+      </div>
+      <div className="mt-4 text-base sm:text-lg md:text-xl lg:text-2xl">
         {index + 1} of {certifications.length}
       </div>
+      <button
+        className="absolute left-0 top-[35vh] rounded-full text-stone-200 hover:text-white p-1 z-10"
+        onClick={() =>
+          handleSelect(index - 1 >= 0 ? index - 1 : certifications.length - 1)
+        }
+      >
+        <ChevronLeft size={35} />
+      </button>
+      <button
+        className="absolute right-0 top-[35vh] rounded-full text-stone-200 hover:text-white p-1 z-10"
+        onClick={() =>
+          handleSelect(index + 1 < certifications.length ? index + 1 : 0)
+        }
+      >
+        <ChevronRight size={35} />
+      </button>
     </section>
   );
 };
