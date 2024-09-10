@@ -7,8 +7,8 @@ import planhub from "../images/works/planhub.png";
 
 function Works() {
   return (
-    <section className="works m-12" id="works">
-      <h2 className="text-9xl font-general-sans mb-16 w-screen">
+    <section className="works lg:m-12" id="works">
+      <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-general-sans mb-16 w-screen">
         Recent Works.
       </h2>
 

@@ -165,10 +165,10 @@ const Certifications = () => {
                 <img
                   src={cert.image}
                   alt={cert.title}
-                  className="h-[40vh] w-full object-contain"
+                  className="h-[50vh] w-full object-contain"
                 />
               </div>
-              <div className="text-center rounded w-full h-[16vh] sm:h-[15vh] md:h-[16vh]">
+              <div className="text-center rounded w-full h-[19vh] sm:h-[15vh] md:h-[17vh]">
                 <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-2">
                   {cert.title}
                 </h3>

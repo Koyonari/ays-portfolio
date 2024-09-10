@@ -42,13 +42,13 @@ function Contact() {
       id="contact"
       className="contact-section flex flex-col items-center"
     >
-      <h2 className="contact-h2 text-5xl md:text-7xl font-general-sans text-black text-center mt-10 mb-12 bold">
+      <h2 className="contact-h2 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-general-sans text-black text-center mt-10 mb-12">
         - Get in touch -
       </h2>
       <div className="flex flex-col md:flex-row w-full justify-center items-center">
         <div className="info-left w-full md:w-3/4 px-24 items-center">
           <div className="contact-form-container">
-            <h1 className="text-6xl mb-6 font-extrabold font-general-sans">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-6 font-extrabold font-general-sans">
               Have an awesome idea?
               <br />
               Let's bring forward your vision.
