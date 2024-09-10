@@ -4,19 +4,19 @@ import switchBackground from "../images/components/switch.webp";
 
 function About() {
   return (
-    <section className="hero p-8 flex h-[75vh]">
+    <section className="hero p-4 flex h-[75vh] flex-col md:flex-row md:p-8 items-center">
       <img
         src={switchBackground}
         alt="Switch"
         loading="lazy"
-        className="switch object-cover rounded-full w-[40vw] h-[75vh]"
+        className="switch object-cover rounded-full w-[40vw] md:h-[75vh] h-[30vh]"
       />
 
-      <div className="hero-container w-[60vw]" id="about">
-        <h2 className="text-9xl leading-[8rem] mb-16 font-general-sans">
+      <div className="hero-container md:w-[60vw]" id="about">
+        <h2 className="text-5xl md:text-6xl xl:text-9xl leading-[8rem] md:mb-16 font-general-sans">
           <span>{about.title}</span>
         </h2>
-        <p className="text-[2rem] leading-loose">
+        <p className="text-xl md:text-2xl lg:text-3xl xl:text-4xl leading-normal md:leading-relaxed lg:leading-relaxed xl:leading-relaxed w-full">
           <span>{about.description}</span>
         </p>
       </div>
