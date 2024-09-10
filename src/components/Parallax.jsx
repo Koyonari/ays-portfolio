@@ -1,40 +1,12 @@
-import { useEffect } from "react";
 import background from "../images/components/home_bg.svg";
 import takeyourtime from "../images/components/take-your-time.gif";
 import takeyourtime1 from "../images/components/take-your-time.png";
-import Scrollbar from "smooth-scrollbar";
 
 function Parallax() {
-  useEffect(() => {
-    const parallax = document.querySelector(".parallax");
-    const wrapperElement = document.querySelector(".wrapper");
-
-    if (wrapperElement) {
-      const scrollbar = Scrollbar.get(wrapperElement);
-
-      if (scrollbar) {
-        scrollbar.addListener(({ offset }) => {
-          const scrollY = offset.y;
-          // Calculate opacity based on scroll position
-          const opacity = Math.max(0, 1 - scrollY / 100);
-          parallax.style.opacity = opacity;
-        });
-      }
-    }
-
-    // Cleanup the scrollbar listener when component unmounts
-    return () => {
-      if (Scrollbar) {
-        const scrollbar = Scrollbar.get(wrapperElement);
-        if (scrollbar) scrollbar.destroy();
-      }
-    };
-  }, []);
-
   return (
     <section
       id="parallax"
-      className="parallax transition-opacity duration-500 w-full h-screen relative flex justify-center items-center transform-style-preserve-3d -z-10"
+      className="parallax -z-10 w-full h-screen relative flex justify-center items-center transform-style-preserve-3d"
     >
       <div className="absolute inset-0 flex justify-center items-center translate-z-2">
         <img
