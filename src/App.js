@@ -60,7 +60,7 @@ const App = () => {
           {/* Parallax */}
           <Parallax />
           {/* About/Hero section */}
-          <section className="text-3xl bg-black text-white rounded-3xl py-8 px-8">
+          <section className="text-3xl bg-black text-white rounded-3xl py-8 px-8 flex flex-col">
             <About />
             {/* Services section */}
             <Services />

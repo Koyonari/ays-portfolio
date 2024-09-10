@@ -101,11 +101,11 @@ body {
 
 /* About start */
 .hero-container span {
-  color: hsl(0 0% 100% / 0.2);
+  color: hsla(0, 0%, 100%, 0.089);
   background-clip: text;
   background-repeat: no-repeat;
   background-size: 0% 100%;
-  background-image: linear-gradient(white, white, white);
+  background-image: linear-gradient(white, white);
   animation: scroll-reveal linear forwards;
   animation-timeline: view();
 }
@@ -122,6 +122,7 @@ body {
 @keyframes scroll-reveal {
   to {
     background-size: 100% 100%;
+    color: hsla(0, 0%, 100%, 1);
   }
 }
 /* About end */
