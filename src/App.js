@@ -36,10 +36,10 @@ const App = () => {
             slideOut ? "translate-y-[-100%]" : ""
           }`}
         >
-          <h1 className="text-6xl mb-2 italic font-extrabold uppercase tracking-widest">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl mb-2 italic font-extrabold uppercase tracking-widest">
             Portfolio
           </h1>
-          <h2 className="text-4xl font-semibold uppercase tracking-wider">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold uppercase">
             An Yong Shyan
           </h2>
         </div>
