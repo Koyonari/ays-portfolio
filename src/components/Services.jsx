@@ -44,7 +44,7 @@ function Services() {
               }`}
             >
               <div className="overflow-hidden">
-                <p className="mt-2 ml-4 p-4 text-2xl md:text-3xl lg:text-4xl leading-normal md:leading-relaxed lg:leading-relaxed xl:leading-relaxed">
+                <p className="mt-2 ml-2 sm:ml-4 py-4 text-xl md:text-3xl lg:text-4xl leading-normal md:leading-relaxed lg:leading-relaxed xl:leading-relaxed">
                   {service.description}
                 </p>
               </div>
