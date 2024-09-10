@@ -1,17 +1,19 @@
 const Toolkit = () => {
   return (
-    <section className="stack flex mb-28">
-      <div className="stack-left w-[45vw] ml-24">
-        <h2 className="text-9xl font-general-sans mb-16">Digital Toolkit.</h2>
-        <p className="text-4xl">
+    <section className="stack flex flex-col lg:flex-row p-4">
+      <div className="stack-left lg:w-[45vw] lg:ml-24">
+        <h2 className="font-general-sans text-5xl md:text-6xl lg:text-8xl xl:text-9xl mb-8">
+          Digital Toolkit.
+        </h2>
+        <p className="text-xl md:text-2xl lg:text-3xl xl:text-4xl leading-normal md:leading-relaxed lg:leading-relaxed xl:leading-relaxed">
           My digital toolkit includes a diverse range of programming languages,
           markup languages and frameworks. I am proficient in and have
-          experience with the following technologies.{" "}
+          experience with the following technologies.
         </p>
       </div>
-      <div className="stack-right w-[55vw] ml-40">
+      <div className="stack-right lg:w-[55vw] lg:ml-36 xl:ml-40 mt-8 sm:mt-12 lg:mt-0">
         <div className="stack-front">
-          <ul className="stack-list text-6xl opacity-80 leading-[1.1]">
+          <ul className="stack-list text-2xl md:text-4xl lg:text-6xl xl:text-7xl opacity-80 leading-[1.1]">
             <li>{stack_lang.s1}</li>
             <li>{stack_lang.s2}</li>
             <li>{stack_lang.s3}</li>

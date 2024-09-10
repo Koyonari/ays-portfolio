@@ -10,7 +10,7 @@ function Services() {
   return (
     <section className="services flex flex-col lg:flex-row mb-4 md:mb-10 lg:mb-24 p-4">
       <div className="services-left lg:w-[45vw] lg:ml-24">
-        <h2 className="text-5xl md:text-6xl xl:text-9xl font-general-sans">
+        <h2 className="text-5xl md:text-6xl lg:text-8xl xl:text-9xl font-general-sans">
           {service_header.title}
         </h2>
         <p className="mt-8 text-xl md:text-2xl lg:text-3xl xl:text-4xl leading-normal md:leading-relaxed lg:leading-relaxed xl:leading-relaxed w-full">
@@ -44,7 +44,7 @@ function Services() {
               }`}
             >
               <div className="overflow-hidden">
-                <p className="mt-2 ml-2 sm:ml-4 py-4 text-xl md:text-3xl lg:text-4xl leading-normal md:leading-relaxed lg:leading-relaxed xl:leading-relaxed">
+                <p className="mt-2 ml-2 sm:ml-4 py-4 text-xl md:text-3xl xl:text-4xl leading-normal md:leading-relaxed lg:leading-relaxed xl:leading-relaxed">
                   {service.description}
                 </p>
               </div>
