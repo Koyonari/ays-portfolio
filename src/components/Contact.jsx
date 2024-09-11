@@ -174,8 +174,9 @@ function Contact() {
             <p className="text-sm md:text-lg">Singapore</p>
             {/* Display only if fetched correctly */}
             {singaporeTime && (
-              <p className="time text-sm md:text-lg">
-                Current local time: {singaporeTime}
+              <p className="text-sm md:text-lg">
+                Current local time:
+                <span className="ml-2 font-mono">{singaporeTime}</span>
               </p>
             )}
           </div>

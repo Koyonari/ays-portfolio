@@ -41,9 +41,6 @@ module.exports = {
         ".stack-list": {
           "font-family": "ClashDisplay-Bold",
         },
-        ".time": {
-          "font-weight": "bold",
-        },
       };
 
       addUtilities(newUtilities, ["responsive", "hover"]);
