@@ -46,7 +46,7 @@ function Contact() {
         - Get in touch -
       </h2>
       <div className="flex flex-col md:flex-row w-full justify-center items-center">
-        <div className="info-left w-full md:w-3/4 px-24 items-center">
+        <div className="info-left w-full md:w-3/5 lg:w-3/4 px-8 lg:px-24 items-center">
           <div className="contact-form-container">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-6 font-extrabold font-general-sans">
               Have an awesome idea?
@@ -96,7 +96,7 @@ function Contact() {
               <button
                 type="submit"
                 name="submit"
-                className="submit-btn group flex items-center justify-center px-4 py-2 bg-white text-black border-stone-700 border-2 font-semibold rounded-lg cursor-pointer hover:bg-stone-700 hover:text-white transition-all duration-300"
+                className="submit-btn group flex items-center justify-center px-4 py-2 bg-white text-black border-stone-700 border-2 font-semibold rounded-lg cursor-pointer hover:bg-stone-700 hover:text-white transition-all duration-300 mx-auto sm:mx-0"
               >
                 <div className="relative w-5 h-5 mr-2">
                   <img
@@ -116,16 +116,16 @@ function Contact() {
           </div>
         </div>
 
-        <div className="info-right md:w-1/4 leading-8">
+        <div className="info-right md:w-1/4 leading-8 flex flex-col md:block px-8 md:px-0">
           <div className="contact-info">
-            <h3 className="text-3xl font-general-sans text-black mb-4 mt-12">
+            <h3 className="text-2xl md:text-3xl font-general-sans text-black mb-4 mt-12">
               Contact Details
             </h3>
-            <p>yongshyan.an@gmail.com</p>
-            <p>+65 9711 2702</p>
+            <p className="text-sm md:text-lg">yongshyan.an@gmail.com</p>
+            <p className="text-sm md:text-lg">+65 9711 2702</p>
           </div>
-          <div className="digital-space">
-            <h3 className="text-3xl font-general-sans text-black mb-4 mt-12">
+          <div className="digital-space mt-4 md:mt-12">
+            <h3 className="text-2xl md:text-3xl font-general-sans text-black mb-4">
               My Digital Spaces
             </h3>
 
@@ -133,13 +133,13 @@ function Contact() {
               <img className="github w-6 h-6 mr-2" src={github} alt="github" />
               <a
                 href="https://github.com/Koyonari"
-                className="link-hover text-center py-0.5 px-1"
+                className="text-sm md:text-lg link-hover text-center py-0.5 px-1"
               >
                 GitHub
               </a>
             </div>
 
-            <div className="space flex flex-row items-center">
+            <div className="space flex flex-row items-center my-2 md:my-0">
               <img
                 className="linkedin w-6 h-6 mr-2"
                 src={linkedin}
@@ -147,13 +147,13 @@ function Contact() {
               />
               <a
                 href="https://www.linkedin.com/in/yong-shyan-an-76ab8a272/"
-                className="link-hover text-center py-0.5 px-1"
+                className="text-sm md:text-lg link-hover text-center py-0.5 px-1"
               >
                 LinkedIn
               </a>
             </div>
 
-            <div className="space flex flex-row items-center">
+            <div className="space flex flex-row items-center my-2 md:my-0">
               <img
                 className="monkeytype w-6 h-6 mr-2"
                 src={monkeytype}
@@ -161,19 +161,23 @@ function Contact() {
               />
               <a
                 href="https://monkeytype.com/profile/NovaEclipse"
-                className="link-hover text-center py-0.5 px-1"
+                className="text-sm md:text-lg link-hover text-center py-0.5 px-1"
               >
                 MonkeyType
               </a>
             </div>
           </div>
-          <div className="location">
-            <h3 className="text-3xl font-general-sans text-black mb-4 mt-12">
+          <div className="location mt-4 md:mt-12">
+            <h3 className="text-2xl md:text-3xl font-general-sans text-black mb-4">
               Location
             </h3>
-            <p>Singapore</p>
+            <p className="text-sm md:text-lg">Singapore</p>
             {/* Display only if fetched correctly */}
-            {singaporeTime && <p>Current local time: {singaporeTime}</p>}
+            {singaporeTime && (
+              <p className="time text-sm md:text-lg">
+                Current local time: {singaporeTime}
+              </p>
+            )}
           </div>
         </div>
       </div>

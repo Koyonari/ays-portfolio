@@ -38,6 +38,12 @@ module.exports = {
           "-webkit-text-fill-color": "transparent",
           "-webkit-text-stroke": "5px",
         },
+        ".stack-list": {
+          "font-family": "ClashDisplay-Bold",
+        },
+        ".time": {
+          "font-weight": "bold",
+        },
       };
 
       addUtilities(newUtilities, ["responsive", "hover"]);
