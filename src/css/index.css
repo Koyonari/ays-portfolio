@@ -8,6 +8,32 @@ body {
   scroll-behavior: smooth;
 }
 
+/* Custom Scrollbar for works start */
+@layer utilities {
+  .custom-scrollbar {
+    @apply overflow-auto;
+    scrollbar-width: thin;
+    scrollbar-color: #464646 #000000;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-gray-100 rounded-full;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-gray-400 rounded-full;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-500;
+  }
+}
+/* Custom Scrollbar for works end */
+
 /* Navbar Animation start */
 .menu-active {
   overflow: hidden !important;
