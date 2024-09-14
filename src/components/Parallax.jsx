@@ -26,13 +26,13 @@ function Parallax() {
     <motion.h1
       initial="hidden"
       whileInView="reveal"
-      transition={{ staggerChildren: 0.1 }}
+      transition={{ staggerChildren: 0.055 }}
       className={className}
     >
       {titleChar.map((char) => (
         <motion.span
           key={char}
-          transition={{ duration: 0.2 }}
+          transition={{ duration: 1 }}
           variants={charVariants}
         >
           {char}
