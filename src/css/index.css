@@ -69,34 +69,6 @@ body {
 }
 /* Works Image end */
 
-/* About start */
-.hero-container span {
-  color: hsla(0, 0%, 100%, 0.013);
-  background-clip: text;
-  background-repeat: no-repeat;
-  background-size: 0% 100%;
-  background-image: linear-gradient(white, white);
-  animation: scroll-reveal linear forwards;
-  animation-timeline: view();
-}
-.hero-container h2 span {
-  animation-range-start: cover 20vh;
-  animation-range-end: cover 30vh;
-}
-
-.hero-container p span {
-  animation-range-start: cover 14.5vh;
-  animation-range-end: cover 50vh;
-}
-
-@keyframes scroll-reveal {
-  to {
-    background-size: 100% 100%;
-    color: hsla(0, 0%, 100%, 1);
-  }
-}
-/* About end */
-
 /* Contact Animation start */
 @keyframes outlineAnimation {
   0% {
