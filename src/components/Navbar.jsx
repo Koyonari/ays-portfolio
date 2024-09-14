@@ -97,7 +97,9 @@ function Navbar() {
       >
         <span
           className={`bar block w-[25px] h-[3px] my-1 mx-auto transition-all duration-300 ease-in-out ${
-            menuActive ? "transform translate-y-3.5 rotate-45" : ""
+            menuActive
+              ? "transform sm:translate-y-3.5 md:translate-y-2 rotate-45"
+              : ""
           }`}
           style={{ backgroundColor: menuActive ? "white" : "black" }}
         ></span>
@@ -109,7 +111,9 @@ function Navbar() {
         ></span>
         <span
           className={`bar block w-[25px] h-[3px] my-1 mx-auto transition-all duration-300 ease-in-out ${
-            menuActive ? "transform -translate-y-2 -rotate-45" : ""
+            menuActive
+              ? "transform sm:-translate-y-2 md:-translate-y-3.5 -rotate-45"
+              : ""
           }`}
           style={{ backgroundColor: menuActive ? "white" : "black" }}
         ></span>
