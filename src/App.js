@@ -1,3 +1,4 @@
+// Import files and dependencies
 import { useState, useEffect, useRef } from "react";
 import About from "./components/About";
 import Navbar from "./components/Navbar";
