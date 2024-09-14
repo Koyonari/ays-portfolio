@@ -8,6 +8,11 @@ body {
   scroll-behavior: smooth;
 }
 
+/* Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* Custom Scrollbar for works start */
 @layer utilities {
   .custom-scrollbar {
@@ -33,6 +38,94 @@ body {
   }
 }
 /* Custom Scrollbar for works end */
+
+/* Works Image start */
+.works-box1 {
+  background-image: url("../images/frames/frame1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.works-box2 {
+  background-image: url("../images/frames/frame2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.works-box3 {
+  background-image: url("../images/frames/frame3.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.works-box4 {
+  background-image: url("../images/frames/frame4.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/* Works Image end */
+
+/* About start */
+.hero-container span {
+  color: hsla(0, 0%, 100%, 0.013);
+  background-clip: text;
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  background-image: linear-gradient(white, white);
+  animation: scroll-reveal linear forwards;
+  animation-timeline: view();
+}
+.hero-container h2 span {
+  animation-range-start: cover 20vh;
+  animation-range-end: cover 30vh;
+}
+
+.hero-container p span {
+  animation-range-start: cover 14.5vh;
+  animation-range-end: cover 50vh;
+}
+
+@keyframes scroll-reveal {
+  to {
+    background-size: 100% 100%;
+    color: hsla(0, 0%, 100%, 1);
+  }
+}
+/* About end */
+
+/* Contact Animation start */
+@keyframes outlineAnimation {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.link-hover {
+  position: relative;
+}
+
+.link-hover::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: currentColor;
+  transition: width 0.65s ease-in-out;
+}
+
+.link-hover:hover::after {
+  animation: outlineAnimation 0.65s forwards;
+}
+/* Contact Animation end */
 
 /* Navbar Animation start */
 .menu-active {
@@ -122,96 +215,3 @@ body {
 /* Parallax end */
 
 /* Responsive end */
-
-/* About start */
-.hero-container span {
-  color: hsla(0, 0%, 100%, 0.089);
-  background-clip: text;
-  background-repeat: no-repeat;
-  background-size: 0% 100%;
-  background-image: linear-gradient(white, white);
-  animation: scroll-reveal linear forwards;
-  animation-timeline: view();
-}
-.hero-container h2 span {
-  animation-range-start: cover 20vh;
-  animation-range-end: cover 30vh;
-}
-
-.hero-container p span {
-  animation-range-start: cover 14.5vh;
-  animation-range-end: cover 50vh;
-}
-
-@keyframes scroll-reveal {
-  to {
-    background-size: 100% 100%;
-    color: hsla(0, 0%, 100%, 1);
-  }
-}
-/* About end */
-
-/* Works Image start */
-.works-box1 {
-  background-image: url("../images/frames/frame1.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.works-box2 {
-  background-image: url("../images/frames/frame2.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.works-box3 {
-  background-image: url("../images/frames/frame3.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.works-box4 {
-  background-image: url("../images/frames/frame4.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-/* Works Image end */
-
-/* Contact Animation start */
-@keyframes outlineAnimation {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
-  }
-}
-
-.link-hover {
-  position: relative;
-}
-
-.link-hover::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: currentColor;
-  transition: width 0.65s ease-in-out;
-}
-
-.link-hover:hover::after {
-  animation: outlineAnimation 0.65s forwards;
-}
-/* Contact Animation end */
-
-/* Tailwind */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
