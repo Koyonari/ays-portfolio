@@ -1,11 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import github from "../images/icons/github.svg";
 import linkedin from "../images/icons/linkedin.svg";
 import monkeytype from "../images/icons/monkeytype.svg";
 import submit from "../images/icons/submit.svg";
 import submitwhite from "../images/icons/submit-white.svg";
+import emailjs from "@emailjs/browser";
 
 function Contact() {
+  // Fetch Singapore Time
   const [singaporeTime, setSingaporeTime] = useState("");
 
   useEffect(() => {
@@ -37,6 +39,30 @@ function Contact() {
     fetchAndUpdateSingaporeTime();
   }, []);
 
+  // Email Contact Form
+  const [showPopup, setShowPopup] = useState(false);
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm("service_w50ezu7", "template_z4ppxem", form.current, {
+        publicKey: "bfHtVKNgAv42Llc8T",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+          form.current.reset();
+          setShowPopup(true);
+          setTimeout(() => setShowPopup(false), 5000);
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+  };
+
   return (
     <section
       id="contact"
@@ -57,16 +83,12 @@ function Contact() {
               I am looking for opportunities and internships as a software
               engineer.
             </p>
-            <form
-              action="https://formsubmit.co/yongshyan.an@gmail.com"
-              method="POST"
-              name="form"
-            >
+            <form ref={form} onSubmit={sendEmail}>
               <div className="form-control mb-4">
                 <input
                   type="text"
                   id="name"
-                  name="sender-name"
+                  name="user_name"
                   placeholder="Your Name"
                   className="input-field w-full py-2 text-black border-black border-b-2 border-opacity-50 outline-none"
                   required
@@ -76,7 +98,7 @@ function Contact() {
                 <input
                   type="email"
                   id="email"
-                  name="sender-email"
+                  name="user_email"
                   placeholder="Your Email"
                   className="input-field w-full py-2 text-black border-black border-b-2 border-opacity-50 outline-none"
                   required
@@ -96,6 +118,7 @@ function Contact() {
               <button
                 type="submit"
                 name="submit"
+                value="Send"
                 className="submit-btn group flex items-center justify-center px-4 py-2 bg-white text-black border-stone-700 border-2 font-semibold rounded-lg cursor-pointer hover:bg-stone-700 hover:text-white transition-all duration-300 mx-auto sm:mx-0"
               >
                 <div className="relative w-5 h-5 mr-2">
@@ -182,6 +205,12 @@ function Contact() {
           </div>
         </div>
       </div>
+      {/* Popup message */}
+      {showPopup && (
+        <div className="fixed bottom-4 right-4 bg-green-500 text-white px-4 py-2 rounded shadow-lg animate-fade-out">
+          Message sent successfully!
+        </div>
+      )}
     </section>
   );
 }

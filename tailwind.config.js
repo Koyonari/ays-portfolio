@@ -6,6 +6,15 @@ module.exports = {
       fontFamily: {
         "general-sans": ["GeneralSans-Semibold"],
       },
+      keyframes: {
+        fadeOut: {
+          "0%": { opacity: "1" },
+          "100%": { opacity: "0" },
+        },
+      },
+      animation: {
+        "fade-out": "fadeOut 0.5s ease-out 4.5s forwards",
+      },
     },
     screens: {
       sl: "375px",
