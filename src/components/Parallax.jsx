@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import background from "../images/components/home_bg.svg";
 import takeyourtime from "../images/components/take-your-time.gif";
 import takeyourtime1 from "../images/components/take-your-time.png";
-import regex from "../hooks/regexStringArray";
+import regex from "../utilities/regexStringArray";
 import { motion } from "framer-motion";
 
 function Parallax() {

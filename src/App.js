@@ -12,7 +12,6 @@ import "./css/index.css";
 
 const App = () => {
   const [preloader, setPreloader] = useState(true);
-
   const [slideOut, setSlideOut] = useState(false);
 
   useEffect(() => {

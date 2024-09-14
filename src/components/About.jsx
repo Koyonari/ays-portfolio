@@ -1,7 +1,7 @@
 // About section
 import "../css/index.css";
 import switchBackground from "../images/components/switch.webp";
-import regex from "../hooks/regexStringArray";
+import regex from "../utilities/regexStringArray";
 import { motion } from "framer-motion";
 
 function About() {
