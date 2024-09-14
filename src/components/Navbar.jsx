@@ -86,32 +86,33 @@ function Navbar() {
             Let's Talk
           </a>
         </div>
+      </div>
 
-        <div
-          className={`hamburger cursor-pointer z-[99999] lg:hidden ${
-            menuActive ? "active" : ""
+      {/* Hamburger Menu */}
+      <div
+        className={`hamburger cursor-pointer fixed top-6 right-6 sm:right-10 flex flex-col z-[99999] lg:hidden ${
+          menuActive ? "active" : ""
+        }`}
+        onClick={toggleMenu}
+      >
+        <span
+          className={`bar block w-[25px] h-[3px] my-1 mx-auto transition-all duration-300 ease-in-out ${
+            menuActive ? "transform translate-y-3.5 rotate-45" : ""
           }`}
-          onClick={toggleMenu}
-        >
-          <span
-            className={`bar block w-[25px] h-[3px] my-1.5 mx-auto transition-all duration-300 ease-in-out ${
-              menuActive ? "transform translate-y-2 rotate-45" : ""
-            }`}
-            style={{ backgroundColor: menuActive ? "white" : "black" }}
-          ></span>
-          <span
-            className={`bar block w-[25px] h-[3px] my-1.5 mx-auto transition-all duration-300 ease-in-out ${
-              menuActive ? "opacity-0" : ""
-            }`}
-            style={{ backgroundColor: menuActive ? "white" : "black" }}
-          ></span>
-          <span
-            className={`bar block w-[25px] h-[3px] my-1.5 mx-auto transition-all duration-300 ease-in-out ${
-              menuActive ? "transform -translate-y-2 -rotate-45" : ""
-            }`}
-            style={{ backgroundColor: menuActive ? "white" : "black" }}
-          ></span>
-        </div>
+          style={{ backgroundColor: menuActive ? "white" : "black" }}
+        ></span>
+        <span
+          className={`bar block w-[25px] h-[3px] my-1 mx-auto transition-all duration-300 ease-in-out ${
+            menuActive ? "opacity-0" : ""
+          }`}
+          style={{ backgroundColor: menuActive ? "white" : "black" }}
+        ></span>
+        <span
+          className={`bar block w-[25px] h-[3px] my-1 mx-auto transition-all duration-300 ease-in-out ${
+            menuActive ? "transform -translate-y-2 -rotate-45" : ""
+          }`}
+          style={{ backgroundColor: menuActive ? "white" : "black" }}
+        ></span>
       </div>
 
       {/* Opened Hamburger Menu */}
