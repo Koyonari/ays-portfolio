@@ -6,7 +6,7 @@ import submit from "../images/icons/submit.svg";
 import submitwhite from "../images/icons/submit-white.svg";
 import emailjs from "@emailjs/browser";
 
-function Contact() {
+function Contact({ onMessageSent }) {
   // Fetch Singapore Time
   const [singaporeTime, setSingaporeTime] = useState("");
 
@@ -40,22 +40,25 @@ function Contact() {
   }, []);
 
   // Email Contact Form
-  const [showPopup, setShowPopup] = useState(false);
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs
-      .sendForm("service_w50ezu7", "template_z4ppxem", form.current, {
-        publicKey: "bfHtVKNgAv42Llc8T",
-      })
+      .sendForm(
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
+        form.current,
+        {
+          publicKey: process.env.REACT_APP_PUBLIC_KEY,
+        }
+      )
       .then(
         () => {
           console.log("SUCCESS!");
           form.current.reset();
-          setShowPopup(true);
-          setTimeout(() => setShowPopup(false), 5000);
+          onMessageSent();
         },
         (error) => {
           console.log("FAILED...", error.text);
@@ -205,12 +208,6 @@ function Contact() {
           </div>
         </div>
       </div>
-      {/* Popup message */}
-      {showPopup && (
-        <div className="fixed bottom-4 right-4 bg-green-500 text-white px-4 py-2 rounded shadow-lg animate-fade-out">
-          Message sent successfully!
-        </div>
-      )}
     </section>
   );
 }

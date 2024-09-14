@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import About from "./components/About";
 import Navbar from "./components/Navbar";
 import Parallax from "./components/Parallax";
@@ -8,11 +8,14 @@ import Certifications from "./components/Certifications";
 import Works from "./components/Works";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import noti from "./sound/notification-effect.wav";
 import "./css/index.css";
 
 const App = () => {
   const [preloader, setPreloader] = useState(true);
   const [slideOut, setSlideOut] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
+  const audioRef = useRef(new Audio(noti));
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -26,6 +29,12 @@ const App = () => {
 
     return () => clearTimeout(timer);
   }, []);
+
+  const handleMessageSent = () => {
+    setShowPopup(true);
+    audioRef.current.play();
+    setTimeout(() => setShowPopup(false), 5000);
+  };
 
   return (
     <>
@@ -48,7 +57,7 @@ const App = () => {
           preloader ? "opacity-0" : "opacity-100"
         }`}
       >
-        {/* Navbar */}
+        {/* Navbar TODO:fix navbar when clicking padding*/}
         <div className="fixed top-0 left-0 z-[10000]">
           <Navbar />
         </div>
@@ -71,10 +80,18 @@ const App = () => {
             <Works />
           </section>
           {/* Contact section */}
-          <Contact />
+          <Contact onMessageSent={handleMessageSent} />
           {/* Footer */}
           <Footer />
         </div>
+      </div>
+
+      <div
+        className={`fixed bottom-12 right-8 bg-green-500 text-white px-4 py-2 rounded shadow-lg z-[10001] transition-all duration-500 ease-in-out ${
+          showPopup ? "opacity-100 translate-x-0" : "opacity-0 translate-x-full"
+        }`}
+      >
+        Message sent successfully!
       </div>
     </>
   );
