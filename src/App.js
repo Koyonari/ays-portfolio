@@ -57,7 +57,6 @@ const App = () => {
           preloader ? "opacity-0" : "opacity-100"
         }`}
       >
-        {/* Navbar TODO:fix navbar when clicking padding*/}
         <div className="fixed top-0 left-0 z-[10000]">
           <Navbar />
         </div>
