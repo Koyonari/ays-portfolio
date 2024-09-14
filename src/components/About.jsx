@@ -2,7 +2,7 @@
 import "../css/index.css";
 import switchBackground from "../images/components/switch.webp";
 import regex from "../hooks/regexStringArray";
-import { motion, Variants } from "framer-motion";
+import { motion } from "framer-motion";
 
 function About() {
   const titleChar = regex(about.title);
