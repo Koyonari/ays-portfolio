@@ -28,7 +28,7 @@ function Works() {
             <p className="mt-3 text-sm sm:text-xl md:text-2xl lg:text-xl xl:text-2xl border-stone-700 border-[4px] rounded-full p-3 md:mr-4 me-auto sm:me-0">
               2024
             </p>
-            <p className="mt-3 text-sm sm:text-xl md:text-2xl lg:text-xl xl:text-2xl border-stone-700 border-[4px] rounded-full p-3 custom-scrollbar me-auto sm:me-0">
+            <p className="mt-3 text-sm sm:text-xl md:text-2xl lg:text-xl xl:text-2xl border-stone-700 border-[4px] rounded-full p-3 custom-scrollbar sl:me-auto">
               HTML<b className="font-general-sans px-3">·</b>CSS
               <b className="font-general-sans px-3">·</b>Javascript
               <b className="font-general-sans px-3">·</b>Node.js
@@ -58,7 +58,7 @@ function Works() {
             <p className="mt-3 text-sm sm:text-xl md:text-2xl lg:text-xl xl:text-2xl border-stone-700 border-[4px] rounded-full p-3 md:mr-4 me-auto sm:me-0">
               2024
             </p>
-            <p className="mt-3 text-sm sm:text-xl md:text-2xl lg:text-xl xl:text-2xl border-stone-700 border-[4px] rounded-full p-3 z-10 custom-scrollbar me-auto sm:me-0">
+            <p className="mt-3 text-sm sm:text-xl md:text-2xl lg:text-xl xl:text-2xl border-stone-700 border-[4px] rounded-full p-3 z-10 custom-scrollbar sl:me-auto">
               HTML<b className="font-general-sans px-3">·</b>Javascript
               <b className="font-general-sans px-3">·</b>TailwindCSS
               <b className="font-general-sans px-3">·</b>React.js
