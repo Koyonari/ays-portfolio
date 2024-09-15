@@ -5,6 +5,7 @@ import monkeytype from "../images/icons/monkeytype.svg";
 import submit from "../images/icons/submit.svg";
 import submitwhite from "../images/icons/submit-white.svg";
 import emailjs from "@emailjs/browser";
+import gsap from "gsap";
 
 function Contact({ onMessageSent }) {
   // Fetch Singapore Time
@@ -66,9 +67,54 @@ function Contact({ onMessageSent }) {
       );
   };
 
+  // Animation for Contact Description
+  const contactSection = useRef(null);
+
+  useEffect(() => {
+    const contactElement = contactSection.current;
+
+    // GSAP animation function for contact description
+    const animateDescription = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          gsap.fromTo(
+            ".contact-heading",
+            {
+              opacity: 0,
+              y: 100,
+            },
+            {
+              opacity: 1,
+              y: 0,
+              duration: 1,
+              ease: "power3.out",
+            }
+          );
+          observer.unobserve(entry.target);
+        }
+      });
+    };
+
+    // Create an IntersectionObserver to trigger GSAP animation
+    const observer = new IntersectionObserver(animateDescription, {
+      threshold: 0.3,
+    });
+
+    if (contactElement) {
+      observer.observe(contactElement);
+    }
+
+    return () => {
+      if (contactElement) {
+        observer.unobserve(contactElement);
+      }
+    };
+  }, []);
+
   return (
     <section
       id="contact"
+      ref={contactSection}
       className="contact-section flex flex-col items-center"
     >
       <h2 className="contact-h2 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-general-sans text-black text-center mt-10 mb-12">
@@ -77,7 +123,7 @@ function Contact({ onMessageSent }) {
       <div className="flex flex-col md:flex-row w-full justify-center items-center">
         <div className="info-left w-full md:w-3/5 lg:w-3/4 px-8 lg:px-24 items-center">
           <div className="contact-form-container">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-6 font-extrabold font-general-sans">
+            <h1 className="contact-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-6 font-extrabold font-general-sans">
               Have an awesome idea?
               <br />
               Let's bring forward your vision.
@@ -198,7 +244,6 @@ function Contact({ onMessageSent }) {
               Location
             </h3>
             <p className="text-sm md:text-lg">Singapore</p>
-            {/* Display only if fetched correctly */}
             {singaporeTime && (
               <p className="text-sm md:text-lg">
                 Current local time:
