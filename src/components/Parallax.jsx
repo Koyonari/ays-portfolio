@@ -1,4 +1,4 @@
-import { useRef, useLayoutEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import background from "../images/components/home_bg.svg";
 import takeyourtime from "../images/components/take-your-time.gif";
 import takeyourtime1 from "../images/components/take-your-time.png";
@@ -6,6 +6,8 @@ import gsap from "gsap";
 
 function Parallax() {
   const titleChar = "HEY THERE, I'M YS";
+  const comp = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
 
   const Heading = ({ id, className }) => (
     <h1 id={id} className={className}>
@@ -13,14 +15,18 @@ function Parallax() {
     </h1>
   );
 
-  const comp = useRef(null);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 1600);
 
-  useLayoutEffect(() => {
-    console.log("useLayoutEffect called");
-    if (comp.current) {
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    if (isVisible && comp.current) {
       let ctx = gsap.context(() => {
-        console.log("GSAP context initiated");
-        const timeline = gsap.timeline({ delay: 1.6 });
+        const timeline = gsap.timeline();
 
         timeline
           .from("#title1", {
@@ -49,13 +55,11 @@ function Parallax() {
             },
             "-=0.4"
           );
-
-        return () => ctx.revert();
       }, comp);
 
-      return () => ctx.revert();
+      return () => ctx.revert(); // cleanup
     }
-  }, []);
+  }, [isVisible]);
 
   return (
     <section

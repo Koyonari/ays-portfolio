@@ -1,4 +1,3 @@
-// Import files and dependencies
 import { useState, useEffect, useRef } from "react";
 import About from "./components/About";
 import Navbar from "./components/Navbar";
@@ -16,6 +15,7 @@ const App = () => {
   const [preloader, setPreloader] = useState(true);
   const [slideOut, setSlideOut] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
+  const [preloaderFinished, setPreloaderFinished] = useState(false);
   const audioRef = useRef(new Audio(noti));
 
   useEffect(() => {
@@ -24,6 +24,7 @@ const App = () => {
       // Slide duration
       const slideTimer = setTimeout(() => {
         setPreloader(false);
+        setPreloaderFinished(true);
       }, 400);
       return () => clearTimeout(slideTimer);
     }, 1600); // Preloader duration
@@ -66,7 +67,7 @@ const App = () => {
           className="wrapper w-screen h-screen perspective-100 overflow-y-auto overflow-x-hidden"
         >
           {/* Parallax */}
-          <Parallax />
+          <Parallax preloaderFinished={preloaderFinished} />
           {/* About/Hero section */}
           <section className="text-3xl bg-black text-white rounded-3xl py-8 px-8 flex flex-col">
             <About />

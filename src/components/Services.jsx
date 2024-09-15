@@ -1,15 +1,61 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import { gsap } from "gsap";
 
 function Services() {
   const [activeBox, setActiveBox] = useState(null);
+  const servicesRef = useRef(null);
 
   const handleBoxClick = (index) => {
     setActiveBox(activeBox === index ? null : index);
   };
 
+  useEffect(() => {
+    const servicesElement = servicesRef.current;
+
+    // GSAP animation function
+    const animateServices = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          gsap.fromTo(
+            entry.target.children,
+            { opacity: 0, y: 100, visibility: "hidden" }, // Start hidden, invisible, and below
+            {
+              opacity: 1,
+              y: 0,
+              visibility: "visible",
+              duration: 1,
+              stagger: 0.2,
+              ease: "power2.out",
+            }
+          );
+          // Stop observing after animation
+          observer.unobserve(entry.target);
+        }
+      });
+    };
+
+    // Create an IntersectionObserver
+    const observer = new IntersectionObserver(animateServices, {
+      threshold: 0.4,
+    });
+
+    if (servicesElement) {
+      observer.observe(servicesElement);
+    }
+
+    return () => {
+      if (servicesElement) {
+        observer.unobserve(servicesElement);
+      }
+    };
+  }, []);
+
   return (
-    <section className="services flex flex-col lg:flex-row mb-4 md:mb-10 lg:mb-24 p-4">
-      <div className="services-left lg:w-[45vw] lg:ml-24">
+    <section
+      className="services flex flex-col lg:flex-row mb-4 md:mb-10 lg:mb-24 p-4"
+      ref={servicesRef}
+    >
+      <div className="services-left lg:w-[45vw] lg:ml-24 opacity-0">
         <h2 className="text-5xl md:text-6xl lg:text-8xl xl:text-9xl font-general-sans">
           {service_header.title}
         </h2>
@@ -18,7 +64,7 @@ function Services() {
         </p>
       </div>
       <div
-        className="services-right lg:w-2/3 h-auto mx-auto lg:mx-0 lg:ml-32 mt-12 lg:mt-24 flex flex-col items-center lg:items-start"
+        className="services-right lg:w-2/3 h-auto mx-auto lg:mx-0 lg:ml-32 mt-12 lg:mt-24 flex flex-col items-center lg:items-start opacity-0"
         id="services"
       >
         {services.map((service, index) => (

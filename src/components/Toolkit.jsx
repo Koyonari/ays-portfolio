@@ -1,4 +1,54 @@
+import React, { useRef, useEffect } from "react";
+import { gsap } from "gsap";
+
 const Toolkit = () => {
+  const stackRightRef = useRef(null);
+
+  useEffect(() => {
+    const stackRightElement = stackRightRef.current;
+
+    // GSAP animation function
+    const animateStackRight = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          gsap.fromTo(
+            entry.target.querySelectorAll(".animate-item"),
+            {
+              opacity: 0,
+              y: 100,
+              visibility: "hidden",
+            },
+            {
+              opacity: 1,
+              y: 0,
+              visibility: "visible",
+              duration: 0.3,
+              stagger: 0.2,
+              ease: "power2.out",
+            }
+          );
+          // Stop observing after animation
+          observer.unobserve(entry.target);
+        }
+      });
+    };
+
+    // Create an IntersectionObserver
+    const observer = new IntersectionObserver(animateStackRight, {
+      threshold: 0.4,
+    });
+
+    if (stackRightElement) {
+      observer.observe(stackRightElement);
+    }
+
+    return () => {
+      if (stackRightElement) {
+        observer.unobserve(stackRightElement);
+      }
+    };
+  }, []);
+
   return (
     <section className="stack flex flex-col lg:flex-row p-4 mb-8 md:mb-10 lg:mb-24">
       <div className="stack-left lg:w-[45vw] lg:ml-24">
@@ -11,20 +61,17 @@ const Toolkit = () => {
           experience with the following technologies.
         </p>
       </div>
-      <div className="stack-right lg:w-[55vw] lg:ml-36 xl:ml-40 mt-8 sm:mt-12 lg:mt-0">
+      <div
+        className="stack-right lg:w-[55vw] lg:ml-36 xl:ml-40 mt-8 sm:mt-12 lg:mt-0"
+        ref={stackRightRef}
+      >
         <div className="stack-front">
           <ul className="stack-list text-2xl md:text-4xl lg:text-6xl xl:text-7xl opacity-80 leading-[1.1]">
-            <li>{stack_lang.s1}</li>
-            <li>{stack_lang.s2}</li>
-            <li>{stack_lang.s3}</li>
-            <li>{stack_lang.s4}</li>
-            <li>{stack_lang.s5}</li>
-            <li>{stack_lang.s6}</li>
-            <li>{stack_lang.s7}</li>
-            <li>{stack_lang.s8}</li>
-            <li>{stack_lang.s9}</li>
-            <li>{stack_lang.s10}</li>
-            <li>{stack_lang.s11}</li>
+            {Object.values(stack_lang).map((lang, index) => (
+              <li key={index} className="animate-item invisible">
+                {lang}
+              </li>
+            ))}
           </ul>
         </div>
       </div>

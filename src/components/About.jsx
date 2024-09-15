@@ -1,8 +1,7 @@
-// About section
+import { motion } from "framer-motion";
 import "../css/index.css";
 import switchBackground from "../images/components/switch.webp";
 import regex from "../utilities/regexStringArray";
-import { motion } from "framer-motion";
 
 function About() {
   const titleChar = regex(about.title);
@@ -26,12 +25,13 @@ function About() {
         <motion.h2
           initial="hidden"
           whileInView="reveal"
+          viewport={{ once: true }}
           transition={{ staggerChildren: 0.1 }}
           className="text-5xl md:text-6xl lg:text-8xl xl:text-9xl mb-8 md:mb-16 font-general-sans"
         >
-          {titleChar.map((char) => (
+          {titleChar.map((char, index) => (
             <motion.span
-              key={char}
+              key={index}
               transition={{ duration: 1.5 }}
               variants={charVariants}
             >
@@ -42,12 +42,13 @@ function About() {
         <motion.p
           initial="hidden"
           whileInView="reveal"
+          viewport={{ once: true }}
           transition={{ staggerChildren: 0.01 }}
           className="text-base md:text-2xl lg:text-3xl xl:text-4xl leading-normal md:leading-relaxed lg:leading-relaxed xl:leading-relaxed w-full"
         >
-          {descChar.map((char) => (
+          {descChar.map((char, index) => (
             <motion.span
-              key={char}
+              key={index}
               transition={{ duration: 0.001 }}
               variants={charVariants}
             >
