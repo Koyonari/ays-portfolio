@@ -18,7 +18,7 @@ function Services() {
         if (entry.isIntersecting) {
           gsap.fromTo(
             entry.target.children,
-            { opacity: 0, y: 100, visibility: "hidden" }, // Start hidden, invisible, and below
+            { opacity: 0, y: 100, visibility: "hidden" },
             {
               opacity: 1,
               y: 0,

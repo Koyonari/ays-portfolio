@@ -22,8 +22,8 @@ const Toolkit = () => {
               opacity: 1,
               y: 0,
               visibility: "visible",
-              duration: 0.3,
-              stagger: 0.2,
+              duration: 0.5,
+              stagger: 0.1,
               ease: "power2.out",
             }
           );
