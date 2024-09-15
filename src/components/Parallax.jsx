@@ -1,49 +1,66 @@
-import { useEffect, useState } from "react";
+import { useRef, useLayoutEffect } from "react";
 import background from "../images/components/home_bg.svg";
 import takeyourtime from "../images/components/take-your-time.gif";
 import takeyourtime1 from "../images/components/take-your-time.png";
-import regex from "../utilities/regexStringArray";
-import { motion } from "framer-motion";
+import gsap from "gsap";
 
 function Parallax() {
-  const titleChar = regex("HEY THERE, I'M YS");
-  const [startAnimation, setStartAnimation] = useState(false);
+  const titleChar = "HEY THERE, I'M YS";
 
-  const charVariants = {
-    hidden: { opacity: 0 },
-    reveal: { opacity: 1 },
-  };
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setStartAnimation(true);
-    }, 1600);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  const MotionHeading = ({ className }) => (
-    <motion.h1
-      initial="hidden"
-      whileInView="reveal"
-      transition={{ staggerChildren: 0.055 }}
-      className={className}
-    >
-      {titleChar.map((char) => (
-        <motion.span
-          key={char}
-          transition={{ duration: 1 }}
-          variants={charVariants}
-        >
-          {char}
-        </motion.span>
-      ))}
-    </motion.h1>
+  const Heading = ({ id, className }) => (
+    <h1 id={id} className={className}>
+      {titleChar}
+    </h1>
   );
+
+  const comp = useRef(null);
+
+  useLayoutEffect(() => {
+    console.log("useLayoutEffect called");
+    if (comp.current) {
+      let ctx = gsap.context(() => {
+        console.log("GSAP context initiated");
+        const timeline = gsap.timeline({ delay: 1.6 });
+
+        timeline
+          .from("#title1", {
+            opacity: 0,
+            y: "200%",
+            duration: 0.5,
+            ease: "power1.inOut",
+          })
+          .from(
+            "#title2",
+            {
+              opacity: 0,
+              y: "200%",
+              duration: 0.5,
+              ease: "power1.inOut",
+            },
+            "-=0.4"
+          )
+          .from(
+            "#title3",
+            {
+              opacity: 0,
+              y: "200%",
+              duration: 0.5,
+              ease: "power1.inOut",
+            },
+            "-=0.4"
+          );
+
+        return () => ctx.revert();
+      }, comp);
+
+      return () => ctx.revert();
+    }
+  }, []);
 
   return (
     <section
       id="parallax"
+      ref={comp}
       className="parallax -z-10 w-full h-screen relative flex justify-center items-center transform-style-preserve-3d"
     >
       <div className="absolute inset-0 flex justify-center items-center translate-z-2">
@@ -54,13 +71,10 @@ function Parallax() {
         />
       </div>
       <div className="foreground relative z-10 text-[4.5rem] text-center font-general-sans flex flex-col">
-        {startAnimation && (
-          <>
-            <MotionHeading />
-            <MotionHeading className="text-outline-only" />
-            <MotionHeading />
-          </>
-        )}
+        <Heading id="title1" />
+        <Heading id="title2" className="text-outline-only" />
+        <Heading id="title3" />
+
         <div className="take-your-time absolute xl:bottom-[-20vh] lg:bottom-[-28vh] md:bottom-[-27vh] bottom-[-35vh] flex justify-center w-full">
           <div className="time flex-col">
             <img
