@@ -4,7 +4,7 @@ import takeyourtime from "../images/components/take-your-time.gif";
 import takeyourtime1 from "../images/components/take-your-time.png";
 import gsap from "gsap";
 
-function Parallax() {
+function Parallax({ preloaderFinished }) {
   const titleChar = "HEY THERE, I'M YS";
   const comp = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -15,13 +15,16 @@ function Parallax() {
     </h1>
   );
 
+  // Trigger the animation after the preloader is done
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsVisible(true);
-    }, 1600);
+    if (preloaderFinished) {
+      const timer = setTimeout(() => {
+        setIsVisible(true);
+      });
 
-    return () => clearTimeout(timer);
-  }, []);
+      return () => clearTimeout(timer);
+    }
+  }, [preloaderFinished]);
 
   useEffect(() => {
     if (isVisible && comp.current) {
